@@ -1,6 +1,7 @@
 .global-header {
   border-bottom: 1px solid $grey-4;
   margin: 0 0 ($base-margin * 4);
+  padding: $base-margin 0;
 
   .content-wrapper {
     display: flex;
@@ -8,11 +9,14 @@
     align-items: center;
 
     .logo {
-      margin-right: auto;
+      margin-right: $base-margin;
+    }
+
+    nav {
+      @include tablet {
+        margin-left: auto;
+        float: right;
+      }
     }
   }
-}
-
-.global-nav {
-  float: right;
 }

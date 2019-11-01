@@ -1,6 +1,6 @@
 .global-footer {
   background: $black;
-  padding: $base-margin * 4;
+  padding: ($base-margin * 4) 0;
   
   .content-wrapper {
     display: flex;
@@ -8,10 +8,11 @@
   }
 
   a {
-    margin-right: auto;
+    margin-right: $base-margin;
   }
 
   p {
     float: right;
+    margin-left: auto;
   }
 }
