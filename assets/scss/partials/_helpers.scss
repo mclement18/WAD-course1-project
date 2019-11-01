@@ -1,0 +1,16 @@
+.content-wrapper {
+  max-width: 110rem;
+  margin: 0 auto;
+  padding: 0 1em;
+
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.bare-list {
+  list-style-type: none;
+  padding: 0;
+}

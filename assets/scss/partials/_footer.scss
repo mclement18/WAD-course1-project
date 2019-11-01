@@ -1,0 +1,17 @@
+.global-footer {
+  background: $black;
+  padding: $base-margin * 4;
+  
+  .content-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  a {
+    margin-right: auto;
+  }
+
+  p {
+    float: right;
+  }
+}

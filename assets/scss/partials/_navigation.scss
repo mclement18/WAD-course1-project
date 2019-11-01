@@ -1,0 +1,22 @@
+.global-nav {
+  display: flex;
+
+  a {
+    text-decoration: none;
+    color: $black;
+
+    &:hover,
+    &:focus {
+      color: $primary-color;
+    }
+  }
+  
+  > li {
+    float: left;
+    margin-right: 1.6em;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.elements {
+  font-size: 1rem;
+  counter-reset: elements;
+}
+
+.element {
+  counter-increment: elements;
+  margin: 0 0 $base-margin * 4;
+
+  &__title {
+    &::before {
+      content: counter(elements, decimal-leading-zero) ". ";
+    }
+  }
+}

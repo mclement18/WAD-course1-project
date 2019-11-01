@@ -1,0 +1,18 @@
+.global-header {
+  border-bottom: 1px solid $grey-4;
+  margin: 0 0 ($base-margin * 4);
+
+  .content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .logo {
+      margin-right: auto;
+    }
+  }
+}
+
+.global-nav {
+  float: right;
+}
