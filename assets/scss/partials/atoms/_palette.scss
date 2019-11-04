@@ -1,0 +1,62 @@
+.palette {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: - $base-margin;
+  font-size: 1rem;
+
+  li {
+    width: calc(50% - #{$base-margin});
+    margin: 0 $base-margin $base-margin 0;
+    float: left;
+
+    @include tablet {
+      width: calc(25% - #{$base-margin});      
+    }
+    @include desktop {
+      width: calc(16.6666667% - #{$base-margin});      
+    }
+  }
+
+  &__color {
+    height: 6em;
+  }
+
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+
+.primary-color {
+  background: $primary-color;
+}
+
+.secondary-color {
+  background: $secondary-color;
+}
+
+.black {
+  background: $black;
+}
+
+.grey-1 {
+  background: $grey-1;
+}
+
+.grey-2 {
+  background: $grey-2;
+}
+
+.grey-3 {
+  background: $grey-3;
+}
+
+.grey-4 {
+  background: $grey-4;
+}
+
+.grey-5 {
+  background: $grey-5;
+}

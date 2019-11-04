@@ -5,7 +5,7 @@
 
 .element {
   counter-increment: elements;
-  margin: 0 0 $base-margin * 4;
+  margin: 0 0 $base-margin * 3;
 
   &__title {
     &::before {
