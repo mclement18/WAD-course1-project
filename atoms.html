@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-  <svg>
+  <svg style="display: none;">
     <defs>
       <symbol id="done" >
         <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/>
@@ -249,7 +249,14 @@
         <li class="element">
           <h2 class="element__title" id="logo">Logo</h2>
           <div class="element__content">
-
+            <h3 class="delta">Logo</h3>
+            <div class="bg">
+              <a class="logo" href="index.html"><span><em>My</em> Bucket List</span></a>
+            </div>
+            <h3 class="delta">Logo Inverted</h3>
+            <div class="bg bg--black">
+              <a class="logo logo--inverted" href="index.html"><span><em>My</em> Bucket List</span></a>
+            </div>
           </div>
         </li>
         <li class="element">
@@ -275,7 +282,7 @@
   </main>
   <footer class="global-footer">
     <div class="content-wrapper">
-      <a class="logo" href=""><span><em>My</em> Bucket List</span></a>
+      <a class="logo logo--inverted" href=""><span><em>My</em> Bucket List</span></a>
       <p>&copy; EPFL 2019</p>
     </div>
   </footer>
