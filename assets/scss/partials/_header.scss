@@ -9,7 +9,11 @@
     align-items: center;
 
     .logo {
-      margin-right: $base-margin;
+      margin: 0 $base-margin $base-margin 0;
+
+      @include tablet {
+        margin: 0 $base-margin 0 0;
+      }
     }
 
     nav {

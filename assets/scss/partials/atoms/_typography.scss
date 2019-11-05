@@ -1,0 +1,86 @@
+.glyph {
+  float: left;
+  margin: 0 ($base-margin * 3)  $base-margin 0;
+
+  p {
+    font-size: 10em;
+    line-height: 1em;
+    color: $black;
+    margin: 0;
+  }
+}
+
+.weigths {
+margin: 0 0 $base-margin 0;
+
+  p {
+    line-height: 1em;
+    color: $black;
+  } 
+
+  .regular-italic,
+  .bold-italic {
+    font-style: italic;
+  }
+
+  .bold,
+  .bold-italic {
+    font-weight: bold;
+  }
+}
+
+.style {
+  font-size: 1rem;
+
+  li {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $grey-4;
+    min-height: 9em;
+
+    &:first-child {
+      min-height: 5em;
+    }
+
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    @include tablet {
+      min-height: 7em;
+    }
+  }
+}
+
+.col {
+  float: left;
+  margin: 0 ($base-margin * 2) 0 0;
+
+  @supports (display: flex) {
+    flex: 0 1 15%;
+    margin: 0 5px 0 0;
+
+    &:first-child {
+      flex: 1 0 35%;
+    }
+  
+    &__head:first-child {
+      flex: 1 0 30%;
+      
+      @include tablet {
+        flex: 1 0 35%;
+      }
+    }
+  }
+
+  &__data {
+    font-size: 1.3em;
+  }
+}
+
+.action {
+  font-size: 1.3em;
+  text-transform: uppercase;
+}
