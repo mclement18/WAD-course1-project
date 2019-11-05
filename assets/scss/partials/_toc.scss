@@ -2,17 +2,9 @@
   counter-reset: toc;
 
   &__element {
-    text-decoration: none;
-    color: $primary-color;
-
     &::before {
       counter-increment: toc;
       content: counter(toc) ". ";
-    }
-
-    &:hover,
-    &:focus {
-      text-decoration: underline;
     }
   }
 }

@@ -35,9 +35,9 @@
         </div>
         <nav>
           <ul class="global-nav bare-list">
-            <li><a href="atoms.html">Atoms</a></li>
-            <li><a href="molecules.html">Molecules</a></li>
-            <li><a href="organisms.html">Organisms</a></li>
+            <li><a class="link link--head" href="atoms.html">Atoms</a></li>
+            <li><a class="link link--head" href="molecules.html">Molecules</a></li>
+            <li><a class="link link--head" href="organisms.html">Organisms</a></li>
           </ul>
         </nav>
       </div>
@@ -46,15 +46,15 @@
       <div class="content-wrapper">
         <h1>Atoms</h1>
         <ul class="toc bare-list">
-          <li><a class="toc__element" href="#colors">Colors</a></li>
-          <li><a class="toc__element" href="#typography">Typography</a></li>
-          <li><a class="toc__element" href="#buttons">Buttons</a></li>
-          <li><a class="toc__element" href="#form-elements">Form elements</a></li>
-          <li><a class="toc__element" href="#icons">Icons</a></li>
-          <li><a class="toc__element" href="#logo">Logo</a></li>
-          <li><a class="toc__element" href="#links">Links</a></li>
-          <li><a class="toc__element" href="#avatar">Avatar</a></li>
-          <li><a class="toc__element" href="#tags">Tags</a></li>
+          <li><a class="toc__element link" href="#colors">Colors</a></li>
+          <li><a class="toc__element link" href="#typography">Typography</a></li>
+          <li><a class="toc__element link" href="#buttons">Buttons</a></li>
+          <li><a class="toc__element link" href="#form-elements">Form elements</a></li>
+          <li><a class="toc__element link" href="#icons">Icons</a></li>
+          <li><a class="toc__element link" href="#logo">Logo</a></li>
+          <li><a class="toc__element link" href="#links">Links</a></li>
+          <li><a class="toc__element link" href="#avatar">Avatar</a></li>
+          <li><a class="toc__element link" href="#tags">Tags</a></li>
         </ul>
       </div>
     </div>
@@ -262,7 +262,20 @@
         <li class="element">
           <h2 class="element__title" id="links">Links</h2>
           <div class="element__content">
-
+            <ul class="bare-list links">
+              <li>
+                <h3 class="delta">Regular Link</h3>
+                <a class="link" href="somewhere">A regular link</a>
+              </li>
+              <li>
+                <h3 class="delta">Main navigation link</h3>
+                <a class="link link--head" href="somewhere">A link in the header navigation</a>
+              </li>
+              <li>
+                <h3 class="delta">Footer navigation link</h3>
+                <a class="link link--foot" href="somewhere">A link in the footer</a>
+              </li>
+            </ul>
           </div>
         </li>
         <li class="element">
