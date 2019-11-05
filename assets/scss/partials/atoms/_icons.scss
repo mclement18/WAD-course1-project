@@ -1,0 +1,19 @@
+.icons {
+  li {
+    margin: 0 0 $base-margin;
+  }
+
+  .icon {
+    position: relative;
+    top: 8px;
+  }
+}
+
+.icon {
+  fill: $grey-3;
+  width: 24px;
+
+  &--primary{
+    fill: $primary-color;
+  }
+}
