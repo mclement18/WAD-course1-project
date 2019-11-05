@@ -195,7 +195,40 @@
         <li class="element">
           <h2 class="element__title" id="buttons">Buttons</h2>
           <div class="element__content">
-
+            <h3 class="delta">Classic Buttons</h3>
+            <div class="buttons">
+              <button class="btn" type="submit">Button</button>
+              <a class="btn" href="somewhere">Link Button</a>
+            </div>
+            <h3 class="delta">Primary Button</h3>
+            <div class="buttons">
+              <button class="btn btn--primary" type="submit">Button</button>
+            </div>
+            <h3 class="delta">Secondary Button</h3>
+            <div class="buttons">
+              <button class="btn btn--secondary" type="submit" data-text-swap="Other text">Some text</button>
+            </div>
+            <h3 class="delta">Buttons with icon</h3>
+            <div class="buttons">
+              <button class="btn" type="submit">
+                <svg class="icon" viewBox="0 0 24 24" width="18" role="presentation">
+                  <use xlink:href="#done"></use>
+                </svg>
+                Button
+              </button>
+              <button class="btn btn--primary" type="submit">
+                <svg class="icon" viewBox="0 0 24 24" width="18" role="presentation">
+                  <use xlink:href="#done"></use>
+                </svg>
+                Button
+              </button>
+              <button class="btn" type="submit">
+                <svg class="icon icon--primary" viewBox="0 0 24 24" width="18" role="presentation">
+                  <use xlink:href="#favorite"></use>
+                </svg>
+                Button
+              </button>
+            </div>
           </div>
         </li>
         <li class="element">
@@ -310,5 +343,6 @@
       <p>&copy; EPFL 2019</p>
     </div>
   </footer>
+  <script type="text/javascript" src="assets/js/butttons.js"></script>
 </body>
 </html>
