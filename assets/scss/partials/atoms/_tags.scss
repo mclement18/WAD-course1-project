@@ -1,0 +1,47 @@
+.tag {
+  font-size: 1.3rem;
+  line-height: 1;
+  background: $grey-4;
+  color: $grey-1;
+
+  padding: .5em 1em;
+  margin: 0;
+  width: max-content;
+  
+  border: 1px solid $grey-4;
+  border-radius: 2px;
+
+  text-decoration: none;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+
+  &:hover,
+  &:focus {
+    background: $primary-color;
+    color: $white;
+    border: 1px solid $primary-color;
+  }
+}
+
+.tag--inverted {
+  background: $primary-color;
+  color: $white;
+  border: 1px solid $primary-color;
+
+  &:hover,
+  &:focus {
+    background: $grey-4;
+    color: $grey-1;
+    border: 1px solid $grey-4;
+  }
+}
+
+.element__content {
+  .tag {
+    margin: 0 0 $base-margin 0;
+  }
+}
