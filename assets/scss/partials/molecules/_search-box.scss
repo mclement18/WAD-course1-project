@@ -1,0 +1,36 @@
+.search {
+  .input__group {
+    @include tablet {
+      display: block;
+    }
+  }
+
+  .input__row {
+    box-shadow: 0 2px 10px 1px $grey-4;
+  }
+
+  .input__field {
+    border: 1px solid $grey-4;
+    border-radius: 2px 0 0 2px;
+    box-shadow: none;
+
+    &:focus {
+      border: 1px solid $primary-color;
+    }
+  }
+
+  .btn {
+    border-left: none;
+    border-radius: 0 2px 2px 0;
+  }
+}
+
+.search--primary {
+  .input__field {
+    border: 1px solid $primary-color;
+
+    &:focus {
+      border: 1px solid darken($primary-color, 20);
+    }
+  }
+}
