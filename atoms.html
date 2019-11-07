@@ -234,7 +234,60 @@
         <li class="element">
           <h2 class="element__title" id="form-elements">Form elements</h2>
           <div class="element__content">
-
+            <h3 class="delta">label</h3>
+            <div class="input-group">
+              <label class="input__label" for="something">A label</label>
+            </div>
+            <h3 class="delta">input fields</h3>
+            <ul class="field-list bare-list">
+              <li>
+                <h4 class="zeta">text</h4>
+                <div class="input-group">
+                  <input class="input input__field" id="text" type="text" name="text" placeholder="some text" />
+                </div>
+              </li>
+              <li>
+                <h4 class="zeta">requiered text</h4>
+                <div class="input-group">
+                  <input class="input input__field" id="text-required" type="text" name="text-required" placeholder="some required text" required/>
+                </div>
+              </li>
+              <li>
+                <h4 class="zeta">email</h4>
+                <div class="input-group">
+                  <input class="input input__field" id="email" type="email" name="email" placeholder="email@exemple.com" required/>
+                </div>
+              </li>
+              <li>
+                <h4 class="zeta">password</h4>
+                <div class="input-group">
+                  <input class="input input__field" id="password" type="password" name="password" required/>
+                </div>
+              </li>
+            </ul>
+            <h3 class="delta">textarea</h3>
+            <div class="input-group">
+              <textarea class="input input__textarea" id="bigger-text" name="bigger-text" maxlength="500" placeholder="some bigger text"></textarea>
+            </div>
+            <h3 class="delta">input image</h3>
+            <div class="input-group">
+              <div class="input__file-container">
+                <input class="input input__file" id="file" type="file" name="file" accept="image/*" required />
+                <label class="btn input__file-trigger" for="file">choose file</label>
+              </div>
+            </div>
+            <h3 class="delta">check-box</h3>
+            <div class="input-group">
+              <label class="checkbox-container epsilon" for="checkbox">
+                <input class="input__checkbox" id="checkbox" type="checkbox" name="checkbox" />
+                <span class="checkmark input"></span>
+                A check-box
+              </label>
+            </div>
+            <h3 class="delta">Warning message</h3>
+            <div class="alert">
+              <p>Something went wrong</p>
+            </div>
           </div>
         </li>
         <li class="element">

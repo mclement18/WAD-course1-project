@@ -1,4 +1,6 @@
 const secondaryButtons = document.getElementsByClassName("btn--secondary");
+const fileInputs = document.getElementsByClassName("input__file");
+const fileButtons = document.getElementsByClassName("input__file-trigger");
 
 function changeElementText(element, type) {
   console.log(element);
@@ -24,4 +26,11 @@ for (let index = 0; index < secondaryButtons.length; index++) {
   button.addEventListener("focusout", function() {
     changeElementText(button, "out");
   }, false);
+}
+
+for (let index = 0; index < fileInputs.length; index++) {
+  const input = fileInputs[index];
+  input.addEventListener( "change", function() {  
+    fileButtons[index].innerHTML = this.value.split("\\").pop();  
+  });  
 }
