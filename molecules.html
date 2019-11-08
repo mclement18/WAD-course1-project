@@ -8,6 +8,25 @@
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
+  <svg style="display: none;">
+    <defs>
+      <symbol id="done" >
+        <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/>
+      </symbol>
+      <symbol id="favorite" >
+        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+      </symbol>
+      <symbol id="delete" >
+        <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
+      </symbol>
+      <symbol id="create" >
+        <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+      </symbol>
+      <symbol id="add">
+        <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+      </symbol>
+    </defs>
+  </svg>
   <header>
     <div class="global-header">
       <div class="content-wrapper">
@@ -45,7 +64,7 @@
           <h2 class="element__title" id="search-box">Search Box</h2>
           <div class="element__content">
             <h3 class="delta">Classic search box</h3>
-            <form class="input search" action="search">
+            <form class="input search" action="search" method="get">
               <div class="input__group">
                 <label class="input__label" for="text">Search</label>
                 <div class="input__row">
@@ -55,7 +74,7 @@
               </div>
             </form>
             <h3 class="delta">Primary search box</h3>
-            <form class="input search search--primary" action="search">
+            <form class="input search search--primary" action="search" method="get">
               <div class="input__group">
                 <label class="input__label" for="text">Search</label>
                 <div class="input__row">
@@ -75,7 +94,97 @@
         <li class="element">
           <h2 class="element__title" id="card">Card</h2>
           <div class="element__content">
-
+            <h3 class="delta">card classic</h3>
+            <div class="card">
+              <a class="card__thumb" href="ideas/see-the-northern-lights.html">
+                <img src="assets/images/northern-lights-small.jpg"  srcset="assets/images/northern-lights-small.jpg 300w, assets/images/northern-lights-large.jpg 600w" sizes="100vw" alt="Nothern Lights above a house at noght" />
+                <div class="card__intro">
+                  <h3 class="card__title">Seeing the NothernLights</h3>
+                  <span class="card__subtitle">1245 people are doing this</span>
+                </div>
+              </a>
+              <form class="card__footer" action="idea" method="post">
+                <button class="btn btn--like" type="submit" name="action" value="like">
+                  <svg class="icon" viewBox="0 0 24 24" height="18" width="18" role="presentation">
+                    <use xlink:href="#favorite"></use>
+                  </svg>
+                  Like
+                </button>
+                <button class="btn" type="submit" name="action" value="removeGoal">
+                  <svg class="icon" viewBox="0 0 24 24" height="18" width="18" role="presentation">
+                    <use xlink:href="#delete"></use>
+                  </svg>
+                  Remove
+                </button>
+              </form>
+            </div>
+            <h3 class="delta">card with owner tag</h3>
+            <div class="card">
+              <a class="tag tag--inverted" href="owner">owner</a>
+              <a class="card__thumb" href="ideas/see-the-northern-lights.html">
+                <img src="assets/images/northern-lights-small.jpg"  srcset="assets/images/northern-lights-small.jpg 300w, assets/images/northern-lights-large.jpg 600w" sizes="100vw" alt="Nothern Lights above a house at noght" />
+                <div class="card__intro">
+                  <h3 class="card__title">Seeing the NothernLights</h3>
+                  <span class="card__subtitle">1245 people are doing this</span>
+                </div>
+              </a>
+              <form class="card__footer" action="idea" method="post">
+                <button class="btn btn--like" type="submit" name="action" value="like">
+                  <svg class="icon" viewBox="0 0 24 24" height="18" width="18" role="presentation">
+                    <use xlink:href="#favorite"></use>
+                  </svg>
+                  Like
+                </button>
+                <button class="btn" type="submit" name="action" value="editGoal">
+                  <svg class="icon" viewBox="0 0 24 24" height="18" width="18" role="presentation">
+                    <use xlink:href="#create"></use>
+                  </svg>
+                  Edit
+                </button>
+              </form>
+            </div>
+            <h3 class="delta">card liked</h3>
+            <div class="card">
+              <a class="card__thumb" href="ideas/see-the-northern-lights.html">
+                <img src="assets/images/northern-lights-small.jpg"  srcset="assets/images/northern-lights-small.jpg 300w, assets/images/northern-lights-large.jpg 600w" sizes="100vw" alt="Nothern Lights above a house at noght" />
+                <div class="card__intro">
+                  <h3 class="card__title">Seeing the NothernLights</h3>
+                  <span class="card__subtitle">1245 people are doing this</span>
+                </div>
+              </a>
+              <form class="card__footer" action="idea" method="post">
+                <button class="btn btn--like" type="submit" name="action" value="unlike">
+                  <svg class="icon icon--primary" viewBox="0 0 24 24" height="18" width="18" role="presentation">
+                    <use xlink:href="#favorite"></use>
+                  </svg>
+                  UnLike
+                </button>
+                <button class="btn" type="submit" name="action" value="removeGoal">
+                  <svg class="icon" viewBox="0 0 24 24" height="18" width="18" role="presentation">
+                    <use xlink:href="#delete"></use>
+                  </svg>
+                  Remove
+                </button>
+              </form>
+            </div>
+            <h3 class="delta">card completed</h3>
+            <div class="card">
+              <a class="card__thumb" href="ideas/see-the-northern-lights.html">
+                <img src="assets/images/northern-lights-small.jpg"  srcset="assets/images/northern-lights-small.jpg 300w, assets/images/northern-lights-large.jpg 600w" sizes="100vw" alt="Nothern Lights above a house at noght" />
+                <div class="card__intro">
+                  <h3 class="card__title">Seeing the NothernLights</h3>
+                  <span class="card__subtitle">1245 people are doing this</span>
+                </div>
+              </a>
+              <div class="card__footer">
+                <div class="date">
+                  <svg class="icon icon--primary" viewBox="0 0 24 24" height="18" width="18" role="presentation">
+                    <use xlink:href="#done"></use>
+                  </svg>
+                  <p class="delta">Today</p>
+                </div>
+              </div>
+            </div>
           </div>
         </li>
         <li class="element">

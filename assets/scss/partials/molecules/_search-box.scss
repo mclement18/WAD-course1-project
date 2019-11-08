@@ -30,7 +30,7 @@
     border: 1px solid $primary-color;
 
     &:focus {
-      border: 1px solid darken($primary-color, 20);
+      border: 1px solid darken($primary-color, 50);
     }
   }
 }
