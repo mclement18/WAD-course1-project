@@ -1,0 +1,54 @@
+.comment {
+  display: flex;
+  margin: 0 0 $base-margin 0;
+
+  .avatar {
+    flex: 0 0 auto;
+    margin: 0.2rem $base-margin 0 0;
+  }
+}
+
+.comment__title {
+  display: flex;
+  align-items: center;
+  margin: 0 0 1em 0;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.comment__name {
+  font-size: 1.5rem;
+  margin:0 5px 0 0;
+}
+
+.comment__date {
+  color: $grey-3;
+  margin: 0;
+}
+
+.element__content {
+  .comment {
+    max-width: 650px;
+  }
+}
+
+.comment--add {
+  .avatar {
+    margin-top: $base-margin * 2;
+  }
+
+  .input {
+    max-width: none;
+    flex: 1 0 auto;
+  }
+
+  .input__group {
+    display: block;
+  }
+
+  .btn {
+    padding: $base-margin ($base-margin * 2);
+  }
+}

@@ -51,7 +51,6 @@
           <li><a class="toc__element link" href="#card">Card</a></li>
           <li><a class="toc__element link" href="#navigation">Navigation</a></li>
           <li><a class="toc__element link" href="#comment">Comment</a></li>
-          <li><a class="toc__element link" href="#post-comment">Post Comment</a></li>
           <li><a class="toc__element link" href="#forms">Forms</a></li>
         </ul>
       </div>
@@ -228,13 +227,38 @@
         <li class="element">
           <h2 class="element__title" id="comment">Comment</h2>
           <div class="element__content">
-
-          </div>
-        </li>
-        <li class="element">
-          <h2 class="element__title" id="post-comment">Post Comment</h2>
-          <div class="element__content">
-
+            <h3 class="delta">comment</h3>
+            <div class="comment">
+              <div class="avatar">
+                <a href="profil.html">
+                  <img src="assets/images/avatar.png" width="50" height="50" alt="Blue avatar" />
+                </a>
+              </div>
+              <div class="comment__text">
+                <div class="comment__title">
+                  <a href="profil"><h3 class="comment__name">Jon Doe</h3></a>
+                  <span class="comment__date epsilon">Today</span>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro necessitatibus doloremque autem quidem excepturi odio blanditiis, minima reiciendis sint inventore consectetur commodi repellendus quod ipsam incidunt, nobis repellat perferendis soluta.</p>
+              </div>
+            </div>
+            <h3 class="delta">add comment</h3>
+            <div class="comment comment--add">
+              <div class="avatar">
+                <a href="profil.html">
+                  <img src="assets/images/avatar.png" width="50" height="50" alt="Blue avatar" />
+                </a>
+              </div>
+              <form class="input" action="postComment" method="post">
+                <div class="input__group">
+                  <label class="input__label" for="comment-content-input">Add a comment</label>
+                  <div class="input__row">
+                    <textarea class="input__field" id="comment-content-input" name="commentContent"></textarea>
+                  </div>
+                </div>
+                <button class="btn btn--primary" type="submit">Post</button>
+              </form>
+            </div>
           </div>
         </li>
         <li class="element">
