@@ -1,0 +1,73 @@
+.input {
+font-size: 1rem;
+margin: 0 0 ($base-margin * 2) 0;
+
+  @include desktop {
+    max-width: 600px;
+  }
+
+  a {
+    display: block;
+    font-size: 1.5rem;
+  }
+
+  textarea {
+    height: $base-margin * 5;
+  }
+}
+
+.input__group {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  &--nolabel {
+    display: flex;
+    align-items: center;
+  }
+} 
+
+.checkbox-container + a {
+  float: right;
+  margin-left: auto;
+}
+
+.prompt {
+  display: flex;
+  align-items: center;
+  margin: 0 0 $base-margin;
+
+  a {
+    margin: 0 ($base-margin * 3) 0 0;
+
+    @include tablet {
+      flex: 0 0 25%;
+      margin: 0;
+    }
+  }
+
+  .btn {
+    width: 100%;
+
+    @include tablet {
+      width: auto;
+      flex: 1 0 auto;
+    }
+  }
+}
+
+.additional-info {
+  p {
+    color: $grey-3;
+
+    @include desktop {
+      flex: 0 0 auto;
+    }
+  }
+}
+
+.has-additional-info {
+  margin: 0 0 .5em 0;
+}
