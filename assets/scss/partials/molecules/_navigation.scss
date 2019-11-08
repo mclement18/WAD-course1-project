@@ -1,0 +1,24 @@
+.global-nav {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  
+  > li {
+    float: left;
+    margin-right: 1.6em;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.has-dropdown {
+  position: relative;
+  font-size: 1rem;
+  
+  &:hover .dropdown,
+  &:focus .dropdown {
+    display: block;
+  }
+}

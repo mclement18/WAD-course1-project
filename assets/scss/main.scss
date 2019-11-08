@@ -4,7 +4,6 @@
 @import "partials/atoms/typography";
 @import "partials/helpers";
 @import "partials/header";
-@import "partials/navigation";
 @import "partials/toc";
 @import "partials/elements";
 @import "partials/atoms/palette";
@@ -16,5 +15,7 @@
 @import "partials/atoms/avatar";
 @import "partials/atoms/tags";
 @import "partials/molecules/search-box";
+@import "partials/molecules/navigation";
+@import "partials/molecules/dropdown";
 @import "partials/molecules/card";
 @import "partials/footer";

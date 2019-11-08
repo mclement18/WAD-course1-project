@@ -19,3 +19,14 @@
   list-style-type: disc;
   padding: 0 0 0 $base-margin;
 }
+
+.bg {
+  background: $white;
+  width: max-content;
+  padding: $base-margin;
+  margin: 0 0 $base-margin 0;
+
+  &--black {
+    background: $black;
+  }
+}

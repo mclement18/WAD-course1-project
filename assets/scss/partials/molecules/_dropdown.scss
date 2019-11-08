@@ -1,0 +1,41 @@
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 51px;
+  right: 0;
+  white-space: nowrap;
+
+  background: $white;
+  overflow: hidden;
+  border: 1px solid $grey-4;
+  border-radius: 3px;
+
+  @supports (box-shadow: 0 2px 10px 1px $grey-4) {
+    box-shadow: 0 2px 10px 1px $grey-4;
+    border: none;
+  }
+
+  &:hover,
+  &:focus {
+    display: block;
+  }
+
+  li {
+    border-bottom: 1px solid $grey-4;
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  a {
+    display: block;
+    padding: 0.6em $base-margin;
+
+    &:hover,
+    &:focus {
+      background-color: $grey-4;
+      text-decoration: none;
+    }
+  }
+}  

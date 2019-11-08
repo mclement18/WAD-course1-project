@@ -54,7 +54,7 @@
     &--like {
       border-right: 1px solid $grey-3;
       flex: 1 0 auto;
-      text-align: left;
+      justify-content: flex-start;
     }
   }
 }  
