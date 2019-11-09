@@ -47,7 +47,7 @@
         <h1>Molecules</h1>
         <ul class="toc bare-list">
           <li><a class="toc__element link" href="#search-box">Search Box</a></li>
-          <li><a class="toc__element link" href="#follower">Follower</a></li>
+          <li><a class="toc__element link" href="#followers">Followers</a></li>
           <li><a class="toc__element link" href="#card">Card</a></li>
           <li><a class="toc__element link" href="#navigation">Navigation</a></li>
           <li><a class="toc__element link" href="#comment">Comment</a></li>
@@ -85,9 +85,38 @@
           </div>
         </li>
         <li class="element">
-          <h2 class="element__title" id="follower">Follower</h2>
+          <h2 class="element__title" id="followers">Followers</h2>
           <div class="element__content">
-
+            <h3 class="delta">Follower</h3>
+            <div class="follower">
+              <div class="avatar">
+                <a href="follower-profil">
+                  <img src="assets/images/avatar.png" width="50" height="50" alt="Blue avatar" />
+                </a>
+              </div>
+              <div class="follower__info">
+                <a href="follower-profil"><h3 class="follower__name link">Jon Doe</h3></a>
+                <span class="follower__goal-nb">12 Goals</span>
+              </div>
+              <form action="follow" method="post">
+                <button class="btn" type="submit">Follow</button>
+              </form>
+            </div>
+            <h3 class="delta">Following</h3>
+            <div class="follower">
+              <div class="avatar">
+                <a href="follower-profil">
+                  <img src="assets/images/avatar.png" width="50" height="50" alt="Blue avatar" />
+                </a>
+              </div>
+              <div class="follower__info">
+                <a href="follower-profil"><h3 class="follower__name link">Jon Doe</h3></a>
+                <span class="follower__goal-nb">12 Goals</span>
+              </div>
+              <form action="unfollow" method="post">
+                <button class="btn btn--secondary" type="submit" data-text-swap="Unfollow">Following</button>
+              </form>
+            </div>
           </div>
         </li>
         <li class="element">

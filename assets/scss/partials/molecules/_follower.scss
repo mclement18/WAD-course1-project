@@ -1,0 +1,42 @@
+.follower {
+  display: flex;
+  align-items: center;
+  padding: $base-margin 0;
+  border-bottom: 1px solid $grey-4;
+
+  .avatar {
+    margin: 0 $base-margin 0 0;
+  }
+
+  .btn {
+    width: 110px;
+
+    @include tablet {
+      width: 150px;
+    }
+  }
+}
+
+.follower__info {
+  margin: 0 auto 0 0;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.follower__name {
+  font-size: 1.5rem;
+  margin: 0 0 .1em 0;
+}
+
+.follower__goal-nb {
+  color: $grey-3;
+  margin: 0;
+}
+
+.element__content {
+  .follower {
+    margin: 0 0 $base-margin 0;
+  }
+}
