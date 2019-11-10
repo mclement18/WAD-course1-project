@@ -270,7 +270,64 @@
         <li class="element">
           <h2 class="element__title" id="follower-list">Follower list</h2>
           <div class="element__content">
-
+            <ul class="followers">
+              <li class="follower">
+                <div class="avatar">
+                  <a href="follower-profil">
+                    <img src="assets/images/avatar.png" width="50" height="50" alt="Blue avatar" />
+                  </a>
+                </div>
+                <div class="follower__info">
+                  <a href="follower-profil"><h3 class="follower__name link">Jon Doe</h3></a>
+                  <span class="follower__goal-nb">12 Goals</span>
+                </div>
+                <form action="follow" method="post">
+                  <button class="btn" type="submit">Follow</button>
+                </form>
+              </li>
+              <li class="follower">
+                <div class="avatar">
+                  <a href="follower-profil">
+                    <img src="assets/images/avatar.png" width="50" height="50" alt="Blue avatar" />
+                  </a>
+                </div>
+                <div class="follower__info">
+                  <a href="follower-profil"><h3 class="follower__name link">Stan Smith</h3></a>
+                  <span class="follower__goal-nb">No Goals</span>
+                </div>
+                <form action="unfollow" method="post">
+                  <button class="btn btn--secondary" type="submit" data-text-swap="Unfollow">Following</button>
+                </form>
+              </li>
+              <li class="follower">
+                <div class="avatar">
+                  <a href="follower-profil">
+                    <img src="assets/images/avatar.png" width="50" height="50" alt="Blue avatar" />
+                  </a>
+                </div>
+                <div class="follower__info">
+                  <a href="follower-profil"><h3 class="follower__name link">Jane Moor</h3></a>
+                  <span class="follower__goal-nb">5 Goals</span>
+                </div>
+                <form action="follow" method="post">
+                  <button class="btn" type="submit">Follow</button>
+                </form>
+              </li>
+              <li class="follower">
+                <div class="avatar">
+                  <a href="follower-profil">
+                    <img src="assets/images/avatar.png" width="50" height="50" alt="Blue avatar" />
+                  </a>
+                </div>
+                <div class="follower__info">
+                  <a href="follower-profil"><h3 class="follower__name link">Stu Lee</h3></a>
+                  <span class="follower__goal-nb">50 Goals</span>
+                </div>
+                <form action="follow" method="post">
+                  <button class="btn" type="submit">Follow</button>
+                </form>
+              </li>
+            </ul>
           </div>
         </li>
       </ul>

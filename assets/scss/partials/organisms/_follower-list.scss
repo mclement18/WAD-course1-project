@@ -1,0 +1,11 @@
+.followers {
+  font-size: 1rem;
+
+  .follower {
+    margin: 0;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
