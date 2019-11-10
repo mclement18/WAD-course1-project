@@ -2,40 +2,23 @@
   border-bottom: 1px solid $grey-4;
   margin: 0 0 ($base-margin * 4);
   padding: $base-margin 0 0 0;
+
   .content-wrapper {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-
-    @include tablet {
-      // flex-wrap: nowrap;
-    }
   }
 }
-
-// .upper-part {
-//   display: flex;
-//   flex: 1 0 auto;
-// }
 
 .global-header {
   .logo {
     margin: 0 $base-margin $base-margin 0;
-
-    @include tablet {
-      // margin: 0 $base-margin 0 0;
-    }
   }
 
   .search {
     flex: 1 1 auto;
     margin: 0 $base-margin $base-margin 0;
-    // margin: 0 0 $base-margin 0;
     max-width: none;
-
-    @include tablet {
-      // margin: 0 $base-margin 0 0;
-    }
   }
 
   .input__group {
@@ -51,11 +34,6 @@
 
   nav {
     margin: 0 0 $base-margin 0;
-
-    @include tablet {
-      // margin-left: auto;
-      // float: right;
-    }
   }
 
   .global-nav--tablet {
