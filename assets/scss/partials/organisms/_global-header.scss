@@ -17,8 +17,12 @@
 
   .search {
     flex: 1 1 auto;
-    margin: 0 $base-margin $base-margin 0;
+    margin: 0 0 $base-margin 0;
     max-width: none;
+
+    @include tablet {
+      margin: 0 $base-margin $base-margin 0;
+    }
   }
 
   .input__group {
