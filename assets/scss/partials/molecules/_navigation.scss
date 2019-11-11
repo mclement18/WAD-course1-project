@@ -11,14 +11,28 @@
       margin-right: 0;
     }
   }
+
+  .avatar,
+  img {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .has-dropdown {
-  position: relative;
   font-size: 1rem;
-  
-  &:hover .dropdown,
-  &:focus .dropdown {
-    display: block;
+
+  .dropdown {
+    top: 41px;
+  }
+}
+
+.global-nav--masthead {
+  > li {
+    padding: 0 0 ($base-margin * 2) 0;
+  }
+
+  .actual-location {
+    border-bottom: 1px solid $black;
   }
 }

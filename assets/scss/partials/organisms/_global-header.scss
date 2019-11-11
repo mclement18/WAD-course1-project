@@ -54,3 +54,15 @@
     }
   }
 }
+
+.global-header--style-guide {
+  @include tablet {
+    .logo {
+      margin-right: auto;
+    }
+
+    nav {
+      float: right;
+    }
+  }
+}

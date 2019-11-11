@@ -6,6 +6,11 @@
 
   .avatar {
     margin: 0 $base-margin 0 0;
+    &,
+    img {
+      width: 45px;
+      height: 45px;
+    }
   }
 
   .btn {

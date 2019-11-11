@@ -1,0 +1,134 @@
+.goal {
+  .content-wrapper {
+    margin: 0 0 ($base-margin * 3) 0;
+  }
+}
+
+.goal__title {
+  display: block;
+
+  @include desktop {
+    float: right;
+    width: 50%;
+  }
+}
+
+.goal__author {
+  display: flex;
+  align-items: center;
+  margin: 0 0 .5em 0;
+
+  .avatar {
+    margin: 0 10px 0 0;
+
+    &, 
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.goal__image {
+  margin: 0 0 $base-margin 0;
+  overflow: hidden;
+  border-radius: 2px;
+
+  img {
+    display: block;
+    width: $goal-image-width;
+    margin-left: - $goal-image-left-margin;
+  }
+
+  @include desktop {
+    float: left;
+    margin: 0 ($base-margin * 2) 0 0;
+    width: calc(50% - (#{$base-margin} * 2));
+  }
+}
+
+.goal__info {
+  @include desktop {
+    float: right;
+    width: 50%;
+  }
+}
+
+.goal__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 $base-margin 0;
+
+  @include tablet {
+    flex-wrap: nowrap;
+  }
+
+  .btn {
+    margin: 0 $base-margin $base-margin 0;
+    flex: 1 0 auto;
+    width: calc(50% - #{$base-margin});
+
+    &:last-child {
+      margin: 0 0 $base-margin 0;
+    }
+
+    @include tablet {
+      flex: 0 1 (1 / 3) * 100%;
+    }
+  }
+}
+
+.goal__buttons--three {
+  .btn:first-child {
+    margin: 0 0 $base-margin 0;
+    width: 100%;
+
+    @include tablet {
+      margin: 0 $base-margin $base-margin 0;
+      width: auto;
+    }
+  }
+}
+
+.goal__stats {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  margin: 0 0 $base-margin 0;
+
+  li {
+    color: $grey-3;
+    padding: 0 .5em;
+    border-right: 1px solid $grey-4;
+
+    &:first-child {
+      padding: 0 .5em 0 0;
+    }
+
+    &:last-child {
+      padding: 0 0 0 .5em;
+      border: none;
+    }
+  }
+}
+
+.goal__tags {
+  display: flex;
+  margin: 0;
+
+  .tag {
+    margin: 0;
+  }
+
+  li {
+    margin: 0 .8em 0 0;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}

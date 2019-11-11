@@ -1,10 +1,17 @@
 .comment {
   display: flex;
   margin: 0 0 $base-margin 0;
+  max-width: 800px;
 
   .avatar {
     flex: 0 0 auto;
     margin: 0.2rem $base-margin 0 0;
+
+    &,
+    img {
+      width: 45px;
+      height: 45px;
+    }
   }
 }
 
@@ -26,12 +33,6 @@
 .comment__date {
   color: $grey-3;
   margin: 0;
-}
-
-.element__content {
-  .comment {
-    max-width: 650px;
-  }
 }
 
 .comment--add {

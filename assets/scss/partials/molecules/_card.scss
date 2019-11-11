@@ -20,8 +20,9 @@
   position: relative;
 
   img {
-    width: 100%;
     display: block;
+    width: $goal-image-width;
+    margin-left: - $goal-image-left-margin;
   }
 }
 

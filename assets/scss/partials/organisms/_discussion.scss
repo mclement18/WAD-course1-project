@@ -4,12 +4,16 @@
     display: flex;
     margin: 0 0 $base-margin 0;
     h2,
-    span {
+    .discussion__comment-nb {
       display: inline-block;
     }
 
     h2{
       margin-right: 10px;
+    }
+
+    .discussion__comment-nb {
+      color: $grey-3;
     }
   }
 
