@@ -4,10 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Bucket List - Style Guide: Organisms</title>
-  <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,700,700i&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/main.css">
+  <!--[if lte EI 9]>
+    <link rel="stylesheet" href="assets/css/universal-ie6.css" />      
+  <![endif]-->
+  <!-- [if !(lte IE 9)]><!-->
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,700,700i&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/main.css">
+  <!--<![endif]-->
 </head>
+
 <body>
+
   <svg style="display: none;">
     <defs>
       <symbol id="done" >
@@ -27,12 +34,16 @@
       </symbol>
     </defs>
   </svg>
+
   <header>
+
     <div class="global-header global-header--style-guide">
       <div class="content-wrapper">
+
         <div class="logo">
           <a href="atoms.html"><span><em>My</em> Bucket List - Style Guide</span></a>
         </div>
+
         <nav>
           <ul class="global-nav bare-list">
             <li><a class="link link--head" href="atoms.html">Atoms</a></li>
@@ -40,8 +51,10 @@
             <li><a class="link link--head" href="organisms.html">Organisms</a></li>
           </ul>
         </nav>
+
       </div>
     </div>
+    
     <div class="masthead">
       <div class="content-wrapper">
         <h1>Organisms</h1>
@@ -54,27 +67,36 @@
           <li><a class="toc__element link" href="#goal">Goal masthead</a></li>
         </ul>
       </div>
+
     </div>
+
   </header>
+
   <main>
+
     <div class="content-wrapper">
       <ul class="elements bare-list">
+
         <li class="element">
           <h2 class="element__title" id="global-header">Global Header</h2>
           <div class="element__content">
+
             <h3 class="delta">logged out</h3>
             <div class="global-header">
               <div class="content-wrapper">
+
                 <a class="logo" href="index.html"><span><em>My</em> Bucket List</span></a>
+
                 <form class="input search search--primary" action="search" method="get">
                   <div class="input__group">
-                    <label class="input__label sr-only" for="text">Search</label>
+                    <label class="input__label sr-only" for="logged-out-search-box">Search</label>
                     <div class="input__row">
-                      <input class="input__field" id="text" type="text" name="text" placeholder="E.g. swimming with dolphins" />
-                      <button class="btn btn--primary type="submit">Search</button>
+                      <input class="input__field" id="logged-out-search-box" name="query" type="text" placeholder="E.g. swimming with dolphins" />
+                      <button class="btn btn--primary" type="submit">Search</button>
                     </div>
                   </div>
                 </form>
+
                 <nav>
                     <ul class="bare-list global-nav">
                       <li><a class="link link--head" href="inspiration.html">Inspiration</a></li>
@@ -82,62 +104,82 @@
                       <li><a class="link link--head" href="log-in.html">Log In</a></li>
                     </ul>
                 </nav>
+
               </div>
             </div>
+
             <h3 class="delta">logged in</h3>
             <div class="global-header">
               <div class="content-wrapper">
+
                 <a class="logo" href="index.html"><span><em>My</em> Bucket List</span></a>
+
                 <form class="input search search--primary" action="search" method="get">
                   <div class="input__group">
-                    <label class="input__label sr-only" for="text">Search</label>
+                    <label class="input__label sr-only" for="logged-in-search-box">Search</label>
                     <div class="input__row">
-                      <input class="input__field" id="text" type="text" name="text" placeholder="E.g. swimming with dolphins" />
-                      <button class="btn btn--primary type="submit">Search</button>
+                      <input class="input__field" id="logged-in-search-box" name="query" type="text" placeholder="E.g. swimming with dolphins" />
+                      <button class="btn btn--primary" type="submit">Search</button>
                     </div>
                   </div>
                 </form>
+
                 <nav>
+
                   <ul class="bare-list global-nav global-nav--tablet">
                     <li><a class="link link--head" href="goals.html">My Goals</a></li>
                     <li><a class="link link--head" href="inspiration.html">Inspiration</a></li>
                     <li class="has-dropdown">
+
                       <div class="avatar">
                         <a href="profile"><img src="assets/images/avatar.png" width="50" height="50" alt="Blue avatar" /></a>
                       </div>
+
                       <ul class="bare-list dropdown">
                         <li><a class="link" href="profile.html">Profile</a></li>
                         <li><a class="link" href="settings.html">Settings</a></li>
                         <li><a class="link" href="logout">Log Out</a></li>
                       </ul>
+
                     </li>
                   </ul>
+
                   <ul class="bare-list global-nav global-nav--mobile">
                     <li><a class="link link--head" href="goals.html">My Goals</a></li>
                     <li><a class="link link--head" href="profile.html">Profile</a></li>
                     <li><a class="link link--head" href="settings.html">Settings</a></li>
                     <li><a class="link link--foot" href="logout">Log Out</a></li>
                   </ul>
+
                 </nav>
+
               </div>
             </div>
+
           </div>
         </li>
+
         <li class="element">
           <h2 class="element__title" id="discussion">Discussion</h2>
           <div class="element__content">
+
             <div class="discussion">
+
               <div class="discussion__header">
                 <h2>Discussion</h2>
                 <span class="discussion__comment-nb epsilon">3 comments</span>
               </div>
+
               <ul class="discussion__comments">
+
                 <li class="comment comment--add">
+
                   <div class="avatar">
                     <a href="profil.html">
                       <img src="assets/images/avatar.png" width="50" height="50" alt="Blue avatar" />
                     </a>
                   </div>
+
                   <form class="input" action="postComment" method="post">
                     <div class="input__group">
                       <label class="input__label" for="comment-content-input">Add a comment</label>
@@ -147,13 +189,17 @@
                     </div>
                     <button class="btn btn--primary" type="submit">Post</button>
                   </form>
+
                 </li>
+
                 <li class="comment">
+
                   <div class="avatar">
                     <a href="profil.html">
                       <img src="assets/images/avatar.png" width="50" height="50" alt="Blue avatar" />
                     </a>
                   </div>
+
                   <div class="comment__text">
                     <div class="comment__title">
                       <a href="profil"><h3 class="comment__name">Jon Doe</h3></a>
@@ -161,13 +207,17 @@
                     </div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro necessitatibus doloremque autem quidem excepturi odio blanditiis, minima reiciendis sint inventore consectetur commodi repellendus quod ipsam incidunt, nobis repellat perferendis soluta.</p>
                   </div>
+
                 </li>
+
                 <li class="comment">
+
                   <div class="avatar">
                     <a href="profil.html">
                       <img src="assets/images/avatar.png" width="50" height="50" alt="Blue avatar" />
                     </a>
                   </div>
+                  
                   <div class="comment__text">
                     <div class="comment__title">
                       <a href="profil"><h3 class="comment__name">Stan Smith</h3></a>
@@ -175,13 +225,17 @@
                     </div>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
                   </div>
+
                 </li>
+                
                 <li class="comment">
+
                   <div class="avatar">
                     <a href="profil.html">
                       <img src="assets/images/avatar.png" width="50" height="50" alt="Blue avatar" />
                     </a>
                   </div>
+
                   <div class="comment__text">
                     <div class="comment__title">
                       <a href="profil"><h3 class="comment__name">Jane Moor</h3></a>
@@ -189,16 +243,24 @@
                     </div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, ipsam! Voluptas sint atque modi repellendus, vel possimus tenetur.</p>
                   </div>
+
                 </li>
+
               </ul>
+
             </div>
+
           </div>
         </li>
+
         <li class="element">
           <h2 class="element__title" id="card-list">Card list</h2>
           <div class="element__content">
+
             <ul class="cards">
+
               <li class="card">
+
                 <a class="tag tag--inverted" href="owner">owner</a>
                 <a class="card__thumb" href="ideas/see-the-northern-lights.html">
                   <img src="assets/images/northern-lights-small.jpg"  srcset="assets/images/northern-lights-small.jpg 300w, assets/images/northern-lights-large.jpg 600w" sizes="100vw" alt="Nothern Lights above a house at noght" />
@@ -207,22 +269,26 @@
                     <span class="card__subtitle">1245 people are doing this</span>
                   </div>
                 </a>
+
                 <form class="card__footer" action="idea" method="post">
-                  <button class="btn btn--like" type="submit" name="action" value="like">
+                  <button class="btn btn--like" name="action" type="submit" value="like">
                     <svg class="icon" viewBox="0 0 24 24" height="18" width="18" role="presentation">
                       <use xlink:href="#favorite"></use>
                     </svg>
                     Like
                   </button>
-                  <button class="btn" type="submit" name="action" value="editGoal">
+                  <button class="btn" name="action" type="submit" value="editGoal">
                     <svg class="icon" viewBox="0 0 24 24" height="18" width="18" role="presentation">
                       <use xlink:href="#create"></use>
                     </svg>
                     Edit
                   </button>
                 </form>
+
               </li>
+
               <li class="card">
+
                 <a class="card__thumb" href="ideas/see-the-northern-lights.html">
                   <img src="assets/images/northern-lights-small.jpg"  srcset="assets/images/northern-lights-small.jpg 300w, assets/images/northern-lights-large.jpg 600w" sizes="100vw" alt="Nothern Lights above a house at noght" />
                   <div class="card__intro">
@@ -230,22 +296,26 @@
                     <span class="card__subtitle">1245 people are doing this</span>
                   </div>
                 </a>
+
                 <form class="card__footer" action="idea" method="post">
-                  <button class="btn btn--like" type="submit" name="action" value="like">
+                  <button class="btn btn--like" name="action" type="submit" value="like">
                     <svg class="icon" viewBox="0 0 24 24" height="18" width="18" role="presentation">
                       <use xlink:href="#favorite"></use>
                     </svg>
                     Like
                   </button>
-                  <button class="btn" type="submit" name="action" value="removeGoal">
+                  <button class="btn" name="action" type="submit" value="removeGoal">
                     <svg class="icon" viewBox="0 0 24 24" height="18" width="18" role="presentation">
                       <use xlink:href="#delete"></use>
                     </svg>
                     Remove
                   </button>
                 </form>
+
               </li>
+
               <li class="card">
+
                 <a class="card__thumb" href="ideas/see-the-northern-lights.html">
                   <img src="assets/images/northern-lights-small.jpg"  srcset="assets/images/northern-lights-small.jpg 300w, assets/images/northern-lights-large.jpg 600w" sizes="100vw" alt="Nothern Lights above a house at noght" />
                   <div class="card__intro">
@@ -253,138 +323,183 @@
                     <span class="card__subtitle">1245 people are doing this</span>
                   </div>
                 </a>
+
                 <form class="card__footer" action="idea" method="post">
-                  <button class="btn btn--like" type="submit" name="action" value="unlike">
+                  <button class="btn btn--like" name="action" type="submit" value="unlike">
                     <svg class="icon icon--primary" viewBox="0 0 24 24" height="18" width="18" role="presentation">
                       <use xlink:href="#favorite"></use>
                     </svg>
                     UnLike
                   </button>
-                  <button class="btn" type="submit" name="action" value="removeGoal">
+                  <button class="btn" name="action" type="submit" value="removeGoal">
                     <svg class="icon" viewBox="0 0 24 24" height="18" width="18" role="presentation">
                       <use xlink:href="#delete"></use>
                     </svg>
                     Remove
                   </button>
                 </form>
+
               </li>
+
             </ul>
+
           </div>
         </li>
+
         <li class="element">
           <h2 class="element__title" id="follower-list">Follower list</h2>
           <div class="element__content">
+
             <ul class="followers">
+
               <li class="follower">
+
                 <div class="avatar">
                   <a href="follower-profil">
                     <img src="assets/images/avatar.png" width="50" height="50" alt="Blue avatar" />
                   </a>
                 </div>
+
                 <div class="follower__info">
                   <a href="follower-profil"><h3 class="follower__name link">Jon Doe</h3></a>
                   <span class="follower__goal-nb">12 Goals</span>
                 </div>
+
                 <form action="follow" method="post">
                   <button class="btn" type="submit">Follow</button>
                 </form>
+
               </li>
+
               <li class="follower">
+
                 <div class="avatar">
                   <a href="follower-profil">
                     <img src="assets/images/avatar.png" width="50" height="50" alt="Blue avatar" />
                   </a>
                 </div>
+
                 <div class="follower__info">
                   <a href="follower-profil"><h3 class="follower__name link">Stan Smith</h3></a>
                   <span class="follower__goal-nb">No Goals</span>
                 </div>
+
                 <form action="unfollow" method="post">
-                  <button class="btn btn--secondary" type="submit" data-text-swap="Unfollow">Following</button>
+                  <button class="btn btn--secondary" data-text-swap="Unfollow" type="submit">Following</button>
                 </form>
+
               </li>
+
               <li class="follower">
+
                 <div class="avatar">
                   <a href="follower-profil">
                     <img src="assets/images/avatar.png" width="50" height="50" alt="Blue avatar" />
                   </a>
                 </div>
+
                 <div class="follower__info">
                   <a href="follower-profil"><h3 class="follower__name link">Jane Moor</h3></a>
                   <span class="follower__goal-nb">5 Goals</span>
                 </div>
+
                 <form action="follow" method="post">
                   <button class="btn" type="submit">Follow</button>
                 </form>
+
               </li>
+
               <li class="follower">
+
                 <div class="avatar">
                   <a href="follower-profil">
                     <img src="assets/images/avatar.png" width="40" height="50" alt="Blue avatar" />
                   </a>
                 </div>
+
                 <div class="follower__info">
                   <a href="follower-profil"><h3 class="follower__name link">Stu Lee</h3></a>
                   <span class="follower__goal-nb">50 Goals</span>
                 </div>
+
                 <form action="follow" method="post">
                   <button class="btn" type="submit">Follow</button>
                 </form>
+
               </li>
+
             </ul>
+
           </div>
         </li>
+
         <li class="element">
           <h2 class="element__title" id="masthead">Masthead</h2>
           <div class="element__content">
+
             <h3 class="delta">classic</h3>
             <div class="masthead">
               <div class="content-wrapper">
+
                 <div class="masthead__title">
                   <h1>Log in</h1>
                 </div>
+
               </div>
             </div>
+
             <h3 class="delta">with button right and navigation</h3>
             <div class="masthead">
               <div class="content-wrapper">
+
                 <div class="masthead__title">
                   <h1>My Goals</h1>
                   <a class="btn" href="somewhere">Create Goal</a>
                 </div>
+
                 <ul class="bare-list global-nav global-nav--masthead">
                   <li class="actual-location"><a class="link link--head" href="to-do.html">To-do</a></li>
                   <li><a class="link" href="completed.html">Completed</a></li>
                 </ul>
+
               </div>
             </div>
+
             <h3 class="delta">with user name and navigation</h3>
             <div class="masthead">
               <div class="content-wrapper">
+
                 <div class="masthead__title">
                   <div class="avatar">
-                    <a class="" href="profile.html">
+                    <a href="profile.html">
                       <img src="assets/images/avatar.png" width="50" height="50" alt="Blue avatar" />
                     </a>
                   </div>
                   <h1>Jon Doe</h1>
                 </div>
+
                 <ul class="bare-list global-nav global-nav--masthead">
                   <li><a class="link" href="profil.html">Profil</a></li>
                   <li><a class="link" href="following.html">Following</a></li>
                   <li class="actual-location"><a class="link link--head" href="follower.html">Follower</a></li>
                 </ul>
+
               </div>
             </div>
+
           </div>
         </li>
+
         <li class="element">
           <h2 class="element__title" id="goal">Goal masthead</h2>
           <div class="element__content">
+
             <h3 class="delta">goal with three buttons</h3>
             <div class="masthead goal">
               <div class="content-wrapper">
+
                 <div class="masthead__title goal__title">
+
                   <div class="goal__author">
                     <div class="avatar">
                       <a href="profile.html">
@@ -393,12 +508,17 @@
                     </div>
                     <p>Created by <a class="link link--head" href="profil">Jon Doe</a></p>
                   </div>
+
                   <h1>Swim with dolphins</h1>
+
                 </div>
+
                 <div class="goal__image">
                   <img src="assets/images/dolphins-small.jpg" srcset="assets/images/dolphins-small.jpg 300w, assets/images/dolphins-large.jpg 600w" sizes="100vw" alt="Nothern Lights above a house at noght" />
                 </div>
+
                 <div class="goal__info">
+
                   <form class="goal__buttons goal__buttons--three" action="goal" method="post">
                     <button class="btn" type="submit">
                       <svg class="icon" viewBox="0 0 24 24" width="18" role="presentation">
@@ -419,24 +539,32 @@
                       Remove
                     </button>
                   </form>
+
                   <p class="goal__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident iusto quisquam aperiam harum eveniet, molestiae accusantium, officiis reprehenderit incidunt nam, et veniam quaerat rerum expedita nihil blanditiis consequatur eius? Dicta!</p>
+
                   <ul class="goal__stats bare-list">
                     <li class="goal__likes epsilon">592 likes</li>
                     <li class="goal__doers epsilon">1,592 doing this</li>
                     <li class="goal__comments epsilon"><a class="link" href="#discussion">3 comments</a></li>
                   </ul>
+
                   <ul class="goal__tags bare-list">
                     <li><a class="tag" href="tag">nature</a></li>
                     <li><a class="tag" href="tag">swimming</a></li>
                     <li><a class="tag" href="tag">animals</a></li>
                   </ul>
+
                 </div>  
+
               </div>
             </div>
+
             <h3 class="delta">goal with two buttons</h3>
             <div class="masthead goal">
               <div class="content-wrapper">
+
                 <div class="masthead__title goal__title">
+
                   <div class="goal__author">
                     <div class="avatar">
                       <a href="profile.html">
@@ -445,12 +573,17 @@
                     </div>
                     <p>Created by <a class="link link--head" href="profil">Jon Doe</a></p>
                   </div>
+
                   <h1>Swim with dolphins</h1>
+
                 </div>
+
                 <div class="goal__image">
                   <img src="assets/images/dolphins-small.jpg" srcset="assets/images/dolphins-small.jpg 300w, assets/images/dolphins-large.jpg 600w" sizes="100vw" alt="Nothern Lights above a house at noght" />
                 </div>
+
                 <div class="goal__info">
+
                   <form class="goal__buttons" action="goal" method="post">
                     <button class="btn" type="submit">
                       <svg class="icon" viewBox="0 0 24 24" width="18" role="presentation">
@@ -465,31 +598,43 @@
                       Add goal
                     </button>
                   </form>
+
                   <p class="goal__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident iusto quisquam aperiam harum eveniet, molestiae accusantium, officiis reprehenderit incidunt nam, et veniam quaerat rerum expedita nihil blanditiis consequatur eius? Dicta!</p>
+
                   <ul class="goal__stats bare-list">
                     <li class="goal__likes epsilon">592 likes</li>
                     <li class="goal__doers epsilon">1,592 doing this</li>
                     <li class="goal__comments epsilon"><a class="link" href="#discussion">3 comments</a></li>
                   </ul>
+
                   <ul class="goal__tags bare-list">
                     <li><a class="tag" href="tag">nature</a></li>
                     <li><a class="tag" href="tag">swimming</a></li>
                     <li><a class="tag" href="tag">animals</a></li>
                   </ul>
+
                 </div>  
+
               </div>
             </div>
+
           </div>
         </li>
+
       </ul>
+
     </div>
+
   </main>
+
   <footer class="global-footer">
     <div class="content-wrapper">
       <a class="logo logo--inverted" href=""><span><em>My</em> Bucket List</span></a>
       <p>&copy; EPFL 2019</p>
     </div>
   </footer>
+
   <script src="assets/js/butttons.js"></script>
+
 </body>
 </html>

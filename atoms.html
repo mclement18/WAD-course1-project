@@ -4,10 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Bucket List - Style Guide: Atoms</title>
-  <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,700,700i&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/main.css">
+  <!--[if lte EI 9]>
+    <link rel="stylesheet" href="assets/css/universal-ie6.css" />      
+  <![endif]-->
+  <!-- [if !(lte IE 9)]><!-->
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,700,700i&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/main.css">
+  <!--<![endif]-->
 </head>
+
 <body>
+
   <svg style="display: none;">
     <defs>
       <symbol id="done" >
@@ -27,12 +34,16 @@
       </symbol>
     </defs>
   </svg>
+
   <header>
+
     <div class="global-header global-header--style-guide">
       <div class="content-wrapper">
+        
         <div class="logo">
           <a href="atoms.html"><span><em>My</em> Bucket List - Style Guide</span></a>
         </div>
+
         <nav>
           <ul class="global-nav bare-list">
             <li><a class="link link--head" href="atoms.html">Atoms</a></li>
@@ -40,8 +51,11 @@
             <li><a class="link link--head" href="organisms.html">Organisms</a></li>
           </ul>
         </nav>
+        
       </div>
+
     </div>
+
     <div class="masthead">
       <div class="content-wrapper">
         <h1>Atoms</h1>
@@ -58,64 +72,82 @@
         </ul>
       </div>
     </div>
+
   </header>
+
   <main>
+
     <div class="content-wrapper">
       <ul class="elements bare-list">
+
         <li class="element">
           <h2 class="element__title" id="colors">Colors</h2>
           <div class="element__content">
+
             <ul class="palette bare-list">
+
               <li>
                 <div class="palette__color primary-color"></div>
                 <h3 class="delta">#2c9cf2</h3>
                 <p class="zeta">$primary-color</p>
               </li>
+
               <li>
                 <div class="palette__color secondary-color"></div>
                 <h3 class="delta">#e25d43</h3>
                 <p class="zeta">$secondary-color</p>
               </li>
+
               <li>
                 <div class="palette__color black"></div>
                 <h3 class="delta">#192127</h3>
                 <p class="zeta">$black</p>
               </li>
+
               <li>
                 <div class="palette__color grey-1"></div>
                 <h3 class="delta">#72797e</h3>
                 <p class="zeta">$grey-1</p>
               </li>
+
               <li>
                 <div class="palette__color grey-2"></div>
                 <h3 class="delta">#afbac4</h3>
                 <p class="zeta">$grey-2</p>
               </li>
+
               <li>
                 <div class="palette__color grey-3"></div>
                 <h3 class="delta">#bbc1c6</h3>
                 <p class="zeta">$grey-3</p>
               </li>
+
               <li>
                 <div class="palette__color grey-4"></div>
                 <h3 class="delta">#e3e5e9</h3>
                 <p class="zeta">$grey-4</p>
               </li>
+
               <li>
                 <div class="palette__color grey-5"></div>
                 <h3 class="delta">#f7f9fc</h3>
                 <p class="zeta">$grey-5</p>
               </li>
+
             </ul>
+
           </div>
         </li>
+
         <li class="element">
           <h2 class="element__title" id="typography">Typography</h2>
           <div class="element__content">
+
             <div class="glyph">
               <h3 class="delta">glyph</h3>
               <p>Aa</p>
             </div>
+
             <div class="weigths">
               <h3 class="delta">weights</h3>
               <ul class="bare-list">
@@ -125,7 +157,9 @@
                 <li><p class="bold-italic">Bold Italic</p></li>
               </ul>
             </div>
+
             <ul class="style bare-list">
+
               <li>
                 <h3 class="delta col col__head">style</h3>
                 <h4 class="col col__head">desktop</h4>
@@ -133,6 +167,7 @@
                 <h4 class="col col__head">mobile</h4>
                 <h4 class="col col__head">line-height</h4>
               </li>
+
               <li>
                 <p class="alpha col">H1 / .alpha</p>
                 <p class="col col__data">48px</p>
@@ -140,6 +175,7 @@
                 <p class="col col__data">36px</p>
                 <p class="col col__data">1.2</p>
               </li>
+
               <li>
                 <p class="beta col">H2 / .beta</p>
                 <p class="col col__data">36px</p>
@@ -147,6 +183,7 @@
                 <p class="col col__data">28px</p>
                 <p class="col col__data">1.2</p>
               </li>
+
               <li>
                 <p class="gamma col">H3 / .gamma</p>
                 <p class="col col__data">28px</p>
@@ -154,6 +191,7 @@
                 <p class="col col__data">24px</p>
                 <p class="col col__data">1.2</p>
               </li>
+
               <li>
                 <p class="delta col">H4 / .delta</p>
                 <p class="col col__data">13px</p>
@@ -161,6 +199,7 @@
                 <p class="col col__data">13px</p>
                 <p class="col col__data">1.5</p>
               </li>
+
               <li>
                 <p class="epsilon col">H5 / .epsilon</p>
                 <p class="col col__data">14px</p>
@@ -168,6 +207,7 @@
                 <p class="col col__data">14px</p>
                 <p class="col col__data">1.4</p>
               </li>
+
               <li>
                 <p class="zeta col">H6 / .zeta</p>
                 <p class="col col__data">12px</p>
@@ -175,6 +215,7 @@
                 <p class="col col__data">12px</p>
                 <p class="col col__data">1.4</p>
               </li>
+
               <li>
                 <p class="action col">action/button</p>
                 <p class="col col__data">13px</p>
@@ -182,6 +223,7 @@
                 <p class="col col__data">13px</p>
                 <p class="col col__data">1</p>
               </li>
+
               <li>
                 <p class="col">Paragraph text</p>
                 <p class="col col__data">15px</p>
@@ -189,85 +231,104 @@
                 <p class="col col__data">15px</p>
                 <p class="col col__data">1.6</p>
               </li>
+
             </ul>
+
           </div>
         </li>
+
         <li class="element">
           <h2 class="element__title" id="buttons">Buttons</h2>
           <div class="element__content">
+
             <h3 class="delta">Classic Buttons</h3>
             <div class="buttons">
               <button class="btn" type="submit">Button</button>
               <a class="btn" href="somewhere">Link Button</a>
             </div>
+
             <h3 class="delta">Primary Button</h3>
             <div class="buttons">
               <button class="btn btn--primary" type="submit">Button</button>
             </div>
+
             <h3 class="delta">Secondary Button</h3>
             <div class="buttons">
               <button class="btn btn--secondary" type="submit" data-text-swap="Other text">Some text</button>
             </div>
+
             <h3 class="delta">Buttons with icon</h3>
             <div class="buttons">
+
               <button class="btn" type="submit">
                 <svg class="icon" viewBox="0 0 24 24" width="18" role="presentation">
                   <use xlink:href="#done"></use>
                 </svg>
                 Button
               </button>
+
               <button class="btn btn--primary" type="submit">
                 <svg class="icon" viewBox="0 0 24 24" width="18" role="presentation">
                   <use xlink:href="#done"></use>
                 </svg>
                 Button
               </button>
+
               <button class="btn" type="submit">
                 <svg class="icon icon--primary" viewBox="0 0 24 24" width="18" role="presentation">
                   <use xlink:href="#favorite"></use>
                 </svg>
                 Button
               </button>
+
             </div>
+
           </div>
         </li>
+
         <li class="element">
           <h2 class="element__title" id="form-elements">Form elements</h2>
           <div class="element__content input">
+
             <h3 class="delta">input fields</h3>
             <ul class="field-list bare-list">
+              
               <li>
                 <div class="input__group">
                   <label class="input__label" for="text">Text</label>
                   <div class="input__row">
-                    <input class="input__field" id="text" type="text" name="text" placeholder="some text" />
+                    <input class="input__field" id="text" name="text" type="text" placeholder="some text" />
                   </div>
                 </div>
               </li>
+
               <li>
                 <div class="input__group">
                   <label class="input__label" for="text-required">Requiered text</label>
                   <div class="input__row">
-                    <input class="input__field" id="text-required" type="text" name="text-required" placeholder="some required text" required/>
+                    <input class="input__field" id="text-required" name="text-required" type="text" placeholder="some required text" required/>
                   </div>
                 </div>
               </li>
+
               <li>
                 <div class="input__group">
                   <label class="input__label" for="email">Email</label>
                   <div class="input__row">
-                    <input class="input__field" id="email" type="email" name="email" placeholder="email@exemple.com" required/>
+                    <input class="input__field" id="email" name="email" type="email" placeholder="email@exemple.com" required/>
                   </div>
                 </div>
               </li>
+
               <li>
                 <div class="input__group">
                   <label class="input__label" for="password">Password</label>
                   <div class="input__row">
-                    <input class="input__field" id="password" type="password" name="password" required/>
+                    <input class="input__field" id="password" name="password" type="password" required/>
                   </div>
                 </div>
               </li>
+
               <li>
                 <div class="input__group input__group--textarea">
                   <label class="input__label" for="bigger-text">Textarea</label>
@@ -276,134 +337,173 @@
                   </div>
                 </div>
               </li>
+
             </ul>
+
             <h3 class="delta">input file</h3>
             <div class="input__group">
               <label class="input__label input__label--file" for="file">Input image</label>
                 <div class="input__row">
                 <div class="input__file-container">
-                  <input class="input__file" id="file" type="file" name="file" accept="image/*" required />
+                  <input class="input__file" id="file" name="file" type="file" accept="image/*" required />
                   <label class="btn input__file-trigger" for="file">choose file</label>
                 </div>
               </div>
             </div>
+
             <h3 class="delta">check-box</h3>
             <div class="input__group">
               <label class="checkbox-container epsilon" for="checkbox">
-                <input class="input__checkbox" id="checkbox" type="checkbox" name="checkbox" />
+                <input class="input__checkbox" id="checkbox" name="checkbox" type="checkbox" />
                 <span class="checkmark input__field"></span>
                 A check-box
               </label>
             </div>
+
             <h3 class="delta">Warning message</h3>
             <div class="warning">
               <p>Something went wrong</p>
             </div>
+
           </div>
         </li>
+
         <li class="element">
           <h2 class="element__title" id="icons">Icons</h2>
           <div class="element__content">
+
             <ul class="dotted-list icons">
+
               <li>
                 <svg class="icon" viewBox="0 0 24 24" width="18" role="presentation">
                   <use xlink:href="#done"></use>
                 </svg>
               </li>
+
               <li>
                 <svg class="icon icon--primary" viewBox="0 0 24 24" width="18" role="presentation">
                   <use xlink:href="#done"></use>
                 </svg>
               </li>
+
               <li>
                 <svg class="icon" viewBox="0 0 24 24" width="18" role="presentation">
                   <use xlink:href="#favorite"></use>
                 </svg>
               </li>
+
               <li>
                 <svg class="icon icon--primary" viewBox="0 0 24 24" width="18" role="presentation">
                   <use xlink:href="#favorite"></use>
                 </svg>
               </li>
+
               <li>
                 <svg class="icon" viewBox="0 0 24 24" width="18" role="presentation">
                   <use xlink:href="#delete"></use>
                 </svg>
               </li>
+
               <li>
                 <svg class="icon" viewBox="0 0 24 24" width="18" role="presentation">
                   <use xlink:href="#create"></use>
                 </svg>
               </li>
+
               <li>
                 <svg class="icon" viewBox="0 0 24 24" width="18" role="presentation">
                   <use xlink:href="#add"></use>
                 </svg>
               </li>
+
             </ul>
+
           </div>
         </li>
+
         <li class="element">
           <h2 class="element__title" id="logo">Logo</h2>
           <div class="element__content">
+
             <h3 class="delta">Logo</h3>
             <div class="bg">
               <a class="logo" href="index.html"><span><em>My</em> Bucket List</span></a>
             </div>
+
             <h3 class="delta">Logo Inverted</h3>
             <div class="bg bg--black">
               <a class="logo logo--inverted" href="index.html"><span><em>My</em> Bucket List</span></a>
             </div>
+
           </div>
         </li>
+
         <li class="element">
           <h2 class="element__title" id="links">Links</h2>
           <div class="element__content">
+
             <ul class="bare-list links">
+
               <li>
                 <h3 class="delta">Regular Link</h3>
                 <a class="link" href="somewhere">A regular link</a>
               </li>
+
               <li>
                 <h3 class="delta">Main navigation link</h3>
                 <a class="link link--head" href="somewhere">A link in the header navigation</a>
               </li>
+
               <li>
                 <h3 class="delta">Footer navigation link</h3>
                 <a class="link link--foot" href="somewhere">A link in the footer</a>
               </li>
+
             </ul>
+
           </div>
         </li>
+
         <li class="element">
           <h2 class="element__title" id="avatar">Avatar</h2>
           <div class="element__content">
+
             <h3 class="delta">avatar Classic</h3>
             <div class="avatar">
               <a href="profil.html">
                 <img src="assets/images/avatar.png" width="50" height="50" alt="Blue avatar" />
               </a>
             </div>
+
           </div>
         </li>
+
         <li class="element">
           <h2 class="element__title" id="tags">Tags</h2>
           <div class="element__content">
+
             <h3 class="delta">Tag</h3>
             <a class="tag" href="tag">tag</a>
+
             <h3 class="delta">Tag inverted</h3>
             <a class="tag tag--inverted" href="tag">tag</a>
+
           </div>
         </li>
+
       </ul>
     </div>
+
   </main>
+
   <footer class="global-footer">
     <div class="content-wrapper">
       <a class="logo logo--inverted" href=""><span><em>My</em> Bucket List</span></a>
       <p>&copy; EPFL 2019</p>
     </div>
   </footer>
+
   <script src="assets/js/butttons.js"></script>
+
 </body>
 </html>
