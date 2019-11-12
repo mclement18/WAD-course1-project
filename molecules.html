@@ -319,7 +319,7 @@
             <h3 class="delta">log-in</h3>
             <form class="input" action="log-in" method="post">
               <div class="warning">
-                <div class="input__label"></div> <!--  fake label for alignement with fields-->
+                <div class="input__label fake-label"></div> <!--  fake label for alignement with fields-->
                 <p>Incorrect email/password combination<p>
               </div>
               <div class="input__group">
@@ -335,7 +335,7 @@
                 </div>
               </div>
               <div class="input__group input__group--nolabel">
-                <div class="input__label"></div> <!--  fake label for alignement with fields-->
+                <div class="input__label fake-label"></div> <!--  fake label for alignement with fields-->
                 <label class="checkbox-container epsilon" for="remember-me">
                   <input class="input__checkbox" id="remember-me" type="checkbox" name="rememberMe" />
                   <span class="checkmark input__field"></span>
@@ -344,14 +344,14 @@
                 <a class="link" href="somewhere">Forgot password?</a>
               </div>
               <div class="prompt">
-                <div class="input__label"></div> <!--  fake label for alignement with fields-->
+                <div class="input__label fake-label"></div> <!--  fake label for alignement with fields-->
                 <button class="btn btn--primary" type="submit">Log in</button>
               </div>
             </form>
             <h3 class="delta">create goal</h3>
             <form class="input" action="creat-goal" method="post">
               <div class="warning">
-                <div class="input__label"></div> <!--  fake label for alignement with fields-->
+                <div class="input__label fake-label"></div> <!--  fake label for alignement with fields-->
                 <p>Please add an image and tags to create your goal<p>
               </div>
               <div class="input__group">
@@ -370,7 +370,7 @@
                 </div>
               </div>
               <div class="additional-info">
-                <div class="input__label"></div> <!--  fake label for alignement with fields-->
+                <div class="input__label fake-label"></div> <!--  fake label for alignement with fields-->
                 <p class="epsilon">Your image will be displayed at a 4:3 aspect ration, cropped if necessary, 5MB limit</p>
               </div>
               <div class="input__group">
@@ -385,7 +385,7 @@
                   <textarea class="input__field" id="goal-description-input" name="goalDescription" maxlength="500" placeholder="Optional 500 characters max."></textarea>
                 </div>
               </div>
-              <div class="prompt">
+              <div class="prompt prompt--cancel">
                 <a class="link" href="somewhere">Cancel</a>
                 <button class="btn btn--primary" type="submit">Log in</button>
               </div>

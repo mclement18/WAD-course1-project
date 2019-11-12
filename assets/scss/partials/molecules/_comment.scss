@@ -3,6 +3,12 @@
   margin: 0 0 $base-margin 0;
   max-width: 800px;
 
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
   .avatar {
     flex: 0 0 auto;
     margin: 0.2rem $base-margin 0 0;
@@ -11,6 +17,18 @@
     img {
       width: 45px;
       height: 45px;
+    }
+
+    @supports not (display: flex) {
+      float: left;
+      margin-bottom: 13rem;
+      @include tablet {
+        margin-bottom: 8rem;
+      }
+
+      @include desktop {
+        margin-bottom: 5rem;
+      }
     }
   }
 }
@@ -28,6 +46,10 @@
 .comment__name {
   font-size: 1.5rem;
   margin:0 5px 0 0;
+
+  @supports not (display: flex) {
+    display: inline-block;
+  }
 }
 
 .comment__date {
@@ -38,15 +60,40 @@
 .comment--add {
   .avatar {
     margin-top: $base-margin * 2;
+
+    @supports not (display: flex) {
+      margin-bottom: 10rem;
+    }
   }
 
   .input {
     max-width: none;
     flex: 1 0 auto;
+
+    @supports not (display: flex) {
+      width: 82%;
+
+      @include tablet {
+        width: 86%;
+      }
+      
+      @include desktop {
+        widows: 92%;
+      }
+    }
   }
 
   .input__group {
     display: block;
+  }
+
+  .input__label {
+    float: none;
+  }
+
+  .input__row {
+    float: none;
+    width: auto;
   }
 
   .btn {

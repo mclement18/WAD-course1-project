@@ -7,6 +7,10 @@
     @include tablet {
       margin: 0 ($base-margin * 2) ($base-margin * 2) 0;
       width: calc(50% - (#{$base-margin} * 2));
+
+      @supports not (display: flex) {
+        float: left;
+      }
     }
 
     @include desktop {
@@ -18,5 +22,13 @@
     display: flex;
     flex-wrap: wrap;
     margin-right: -($base-margin * 2);
+  }
+
+  @supports not (display: flex) {
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
   }
 }

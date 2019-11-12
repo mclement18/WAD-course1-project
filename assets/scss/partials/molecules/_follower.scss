@@ -4,12 +4,28 @@
   padding: $base-margin 0;
   border-bottom: 1px solid $grey-4;
 
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
   .avatar {
     margin: 0 $base-margin 0 0;
     &,
     img {
       width: 45px;
       height: 45px;
+    }
+
+    @supports not (display: flex) {
+      float: left;
+    }
+  }
+
+  form {
+    @supports not (display: flex) {
+      float: right;
     }
   }
 
@@ -27,6 +43,10 @@
 
   a {
     text-decoration: none;
+  }
+
+  @supports not (display: flex) {
+    display: inline-block;
   }
 }
 

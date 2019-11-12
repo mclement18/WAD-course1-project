@@ -7,12 +7,14 @@
   padding: $base-margin;
   margin: 0;
   width: max-content;
-  
+  box-sizing: border-box;
+
   border: 1px solid $grey-4;
   border-radius: 2px;
 
   text-decoration: none;
   text-transform: uppercase;
+  text-align: center;
 
   cursor: pointer;
 

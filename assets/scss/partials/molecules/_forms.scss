@@ -29,10 +29,18 @@ margin: 0 0 ($base-margin * 2) 0;
   }
 } 
 
+.fake-label {
+  @include tablet {
+    width: 25%;
+  }
+}
+
 .checkbox-container + a {
   float: right;
   margin-left: auto;
 }
+
+
 
 .prompt {
   display: flex;
@@ -54,8 +62,27 @@ margin: 0 0 ($base-margin * 2) 0;
     @include tablet {
       width: auto;
       flex: 1 0 auto;
+
+      @supports not (display: flex) {
+        width: 75%;
+      }
     }
   }
+}
+
+.prompt--cancel {
+  @supports not (display: flex) {
+    a {
+      float: left;
+      width: 25%;
+      margin: 0;
+    }
+
+    .btn {
+      width: 75%;
+    }
+  }
+
 }
 
 .additional-info {
@@ -65,6 +92,10 @@ margin: 0 0 ($base-margin * 2) 0;
     @include desktop {
       flex: 0 0 auto;
     }
+  }
+
+  .fake-label {
+    margin-bottom: $base-margin * 2;
   }
 }
 

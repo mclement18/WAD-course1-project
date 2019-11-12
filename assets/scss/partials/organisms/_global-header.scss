@@ -13,6 +13,7 @@
 .global-header {
   .logo {
     margin: 0 $base-margin $base-margin 0;
+    display: inline-block;
   }
 
   .search {
@@ -51,6 +52,29 @@
 
     .global-nav--tablet {
       display: flex;
+      @supports not (display: flex) {
+        display: block;
+      }
+    }
+  }
+}
+
+@supports not (display: flex) {
+  .global-header {
+    .logo {
+      float: left;
+    }
+
+    .search {
+      display: inline-block;
+      width: 50%;
+      min-width: 340px;
+    }
+
+    nav {
+      @include desktop {
+        float: right;
+      }
     }
   }
 }
