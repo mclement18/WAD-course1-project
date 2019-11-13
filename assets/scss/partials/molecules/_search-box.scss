@@ -5,6 +5,11 @@
     }
   }
 
+  .input__label {
+    float: none;
+    margin: 0 0 .5em 0;
+  }
+
   .input__row {
     width: 100%;
     box-shadow: 0 2px 10px 1px $grey-4;
@@ -16,13 +21,13 @@
     box-shadow: none;
     width: auto;
 
-    &:focus {
-      border: 1px solid $primary-color;
-    }
-
     @supports not (display: flex) {
       float: left;
       width: 75%;
+    }
+
+    &:focus {
+      border: 1px solid $primary-color;
     }
   }
 

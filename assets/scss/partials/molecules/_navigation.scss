@@ -1,4 +1,6 @@
 .global-nav {
+  @include clearfix;
+  
   display: flex;
   align-items: center;
   margin: 0;
@@ -14,14 +16,7 @@
 
   .avatar,
   img {
-    width: 40px;
-    height: 40px;
-  }
-
-  &::after {
-    content: "";
-    display: table;
-    clear: both;
+    @include sizes(40px);
   }
 }
 

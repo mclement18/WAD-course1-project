@@ -1,10 +1,8 @@
 @import "partials/variables";
 @import "partials/mixins";
 @import "partials/base";
-@import "partials/atoms/typography";
 @import "partials/helpers";
-@import "partials/toc";
-@import "partials/elements";
+@import "partials/atoms/typography";
 @import "partials/atoms/palette";
 @import "partials/atoms/buttons";
 @import "partials/atoms/form-elements";
@@ -13,6 +11,8 @@
 @import "partials/atoms/links";
 @import "partials/atoms/avatar";
 @import "partials/atoms/tags";
+@import "partials/molecules/toc";
+@import "partials/molecules/elements";
 @import "partials/molecules/search-box";
 @import "partials/molecules/navigation";
 @import "partials/molecules/dropdown";
@@ -26,4 +26,4 @@
 @import "partials/organisms/follower-list";
 @import "partials/organisms/masthead";
 @import "partials/organisms/goal";
-@import "partials/footer";
+@import "partials/organisms/footer";

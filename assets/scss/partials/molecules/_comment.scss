@@ -1,27 +1,18 @@
 .comment {
+  @include clearfix;
+
   display: flex;
   margin: 0 0 $base-margin 0;
   max-width: 800px;
-
-  &::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
 
   .avatar {
     flex: 0 0 auto;
     margin: 0.2rem $base-margin 0 0;
 
-    &,
-    img {
-      width: 45px;
-      height: 45px;
-    }
-
     @supports not (display: flex) {
       float: left;
       margin-bottom: 13rem;
+
       @include tablet {
         margin-bottom: 8rem;
       }
@@ -29,6 +20,11 @@
       @include desktop {
         margin-bottom: 5rem;
       }
+    }
+    
+    &,
+    img {
+      @include sizes(45px);
     }
   }
 }
@@ -89,6 +85,7 @@
 
   .input__label {
     float: none;
+    margin: 0 0 .5em 0;
   }
 
   .input__row {

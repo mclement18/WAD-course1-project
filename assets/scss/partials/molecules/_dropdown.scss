@@ -16,9 +16,9 @@
 
   background: $white;
   overflow: hidden;
-  border: 1px solid $grey-4;
+  
   border-radius: 3px;
-
+  border: 1px solid $grey-4;
   @supports (box-shadow: 0 2px 10px 1px $grey-4) {
     box-shadow: 0 2px 10px 1px $grey-4;
     border: none;

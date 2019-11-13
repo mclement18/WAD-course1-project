@@ -1,34 +1,32 @@
+// Layout atom in style guide
 .palette {
+  @include clearfix;
+
   display: flex;
   flex-wrap: wrap;
   margin-right: - $base-margin;
   font-size: 1rem;
 
   li {
-    width: calc(50% - #{$base-margin});
-    margin: 0 $base-margin $base-margin 0;
     float: left;
+    margin: 0 $base-margin $base-margin 0;
+    width: calc(50% - #{$base-margin});
 
     @include tablet {
       width: calc(25% - #{$base-margin});      
     }
+
     @include desktop {
-      width: calc(16.6666667% - #{$base-margin});      
+      width: calc(((1 / 6) * 100%) - #{$base-margin});      
     }
   }
 
   &__color {
     height: 6em;
   }
-
-  &::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
 }
 
-
+// Palette colors
 .primary-color {
   background: $primary-color;
 }

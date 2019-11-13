@@ -1,89 +1,25 @@
 .input {
-font-size: 1rem;
-margin: 0 0 ($base-margin * 2) 0;
-
-  @include desktop {
-    max-width: 600px;
-  }
+  font-size: 1rem;
+  margin: 0 0 ($base-margin * 2) 0;
 
   a {
-    display: block;
+    display: inline-block;
     font-size: 1.5rem;
   }
 
   textarea {
     height: $base-margin * 5;
   }
-}
 
-.input__group {
-  &::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
-  &--nolabel {
-    display: flex;
-    align-items: center;
-  }
-} 
-
-.fake-label {
-  @include tablet {
-    width: 25%;
+  @include desktop {
+    max-width: 600px;
   }
 }
 
-.checkbox-container + a {
-  float: right;
-  margin-left: auto;
-}
-
-
-
-.prompt {
+.input__group--nolabel {
   display: flex;
   align-items: center;
-  margin: 0 0 $base-margin;
-
-  a {
-    margin: 0 ($base-margin * 3) 0 0;
-
-    @include tablet {
-      flex: 0 0 25%;
-      margin: 0;
-    }
-  }
-
-  .btn {
-    width: 100%;
-
-    @include tablet {
-      width: auto;
-      flex: 1 0 auto;
-
-      @supports not (display: flex) {
-        width: 75%;
-      }
-    }
-  }
-}
-
-.prompt--cancel {
-  @supports not (display: flex) {
-    a {
-      float: left;
-      width: 25%;
-      margin: 0;
-    }
-
-    .btn {
-      width: 75%;
-    }
-  }
-
-}
+} 
 
 .additional-info {
   p {
@@ -93,12 +29,71 @@ margin: 0 0 ($base-margin * 2) 0;
       flex: 0 0 auto;
     }
   }
-
-  .fake-label {
-    margin-bottom: $base-margin * 2;
-  }
 }
 
 .has-additional-info {
   margin: 0 0 .5em 0;
+}
+
+// Create Fake label to aligne label-less input and info with the fields
+.input__group--nolabel,
+.warning,
+.additional-info,
+.prompt {
+  &::before {
+    @extend %input__label;
+    content: "";
+
+    @include tablet {
+      width: 25%;
+      margin: 0 0 ($base-margin * 2) 0; // fallback for float to keep the wrapped text indented
+      flex: 0 0 25%; // allow overflow of the additional info on the right when possible
+    }
+  }
+}
+
+.checkbox-container + a {
+  float: right;
+  margin-left: auto;
+}
+
+.prompt {
+  display: flex;
+  align-items: center;
+  margin: 0 0 $base-margin 0;
+
+  .btn {
+    width: 100%;
+
+    @include tablet {
+      width: 75%;
+    }
+  }
+}
+
+.prompt--cancel {
+  @include clearfix;
+
+  // Remove fake label
+  &::before {
+    content: none;
+  }
+
+  a {
+    margin: 0 auto 0 0;
+  }
+
+  .btn {
+    width: 75%;
+  }
+
+  @supports not (display: flex) {
+    a {
+      float: left;
+    }
+
+    .btn {
+      float: right;
+    }
+  }
 }

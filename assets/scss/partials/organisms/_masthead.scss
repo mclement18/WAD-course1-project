@@ -7,16 +7,11 @@
 
     &,
     img {
-      width: 45px;
-      height: 45px;
-    }
-
-    @include desktop {
-      &,
-      img {
-        width: 50px;
-        height: 50px;
-    }
+      @include sizes(45px);
+      
+      @include desktop {
+        @include sizes(50px);
+      }
     }
   }
 
@@ -33,7 +28,8 @@
   }
   
   @supports not (display: flex) {
-
+    @include clearfix;
+    
     h1 {
       display: inline-block;
     }
@@ -44,12 +40,6 @@
 
     .avatar {
       float: left;
-    }
-    
-    &::after {
-      content: "";
-      display: table;
-      clear: both;
     }
   }
 

@@ -1,13 +1,9 @@
 .input__group,
 .warning,
 .additional-info {
-  margin: 0 0 $base-margin 0;
+  @include clearfix;
 
-  &::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+  margin: 0 0 $base-margin 0;
 
   @include tablet {
     display: flex;
@@ -25,18 +21,18 @@
   @include tablet {
     float: right;
     width: 75%;
-    flex: 1 0 auto;
   }
 }
 
-.input__label {
-  display: block;
+.input__label,
+%input__label {
+  display: inline-block;
   color: $black;
   margin: 0 0 .5em 0;
 
   @include tablet {
     float: left;
-    flex: 0 0 25%;
+    margin: 0 auto 0 0;
   }
 }
 
@@ -44,10 +40,12 @@
   background: $white;
   color: $black;
   font-size: 1.5rem;
+
   padding: $base-margin;
   margin: 0;
   border: 1px solid $grey-4;
   border-radius: 2px;
+
   @supports (box-shadow: 0 2px 10px 1px $grey-4) {
     border: 1px solid $white;
     box-shadow: 0 2px 10px 1px $grey-4;
@@ -76,6 +74,7 @@
 
 .input__file-trigger {
   width: 100%;
+
   @supports not (display: flex) {
     display: inline-block;
   }
@@ -83,7 +82,8 @@
 
 .input__file {
   position: absolute;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   opacity: 0;
   width: 0.1px;
 	height: 0.1px;
@@ -140,15 +140,18 @@
     height: 0;
     width: 0;
 
+    // Highlight the box when hovered or focused
     &:hover + .checkmark,
     &:focus + .checkmark {
       border: 1px solid $primary-color;
     }
 
+    // When checkbox checked change box color
     &:checked + .checkmark {
       background: $primary-color;
     }
 
+    // When checkbox checked display checkmark
     &:checked + .checkmark::after {
       display: block;
     }
@@ -163,6 +166,8 @@
   }
 }
 
+
+// Layout atoms in style guide
 .field-list {
   font-size: 1rem;
 }

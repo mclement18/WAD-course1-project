@@ -21,21 +21,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-  .icon {
-    margin: 0 5px 0 0;
-  }
-
+  
   &:hover,
   &:active,
   &:focus {
     text-decoration: none;
     background-color: $grey-4;
     color: $primary-color;
-
+    
     .icon {
       fill: $primary-color;
     }
+  }
+
+  .icon {
+    margin: 0 5px 0 0;
   }
 }
 
@@ -43,21 +43,21 @@
   background: $primary-color;
   color: $white;
   border: 1px solid $primary-color;
-
-  .icon {
-    fill: $white;
-  }
-
+  
   &:hover,
   &:active,
   &:focus {
     background-color: darken($primary-color, 20);
     border-color: darken($primary-color, 10);
     color: $white;
-
+    
     .icon {
       fill: $white;
     }
+  }
+
+  .icon {
+    fill: $white;
   }
 }
 
@@ -69,11 +69,18 @@
     color: $white;
     border: 1px solid $secondary-color;
     color: $white;
-    
+
+    .icon {
+      fill: $white;
+    }
   }
 }
 
+// Layout for atoms buttons in style guide
+
 .buttons {
+  @include clearfix;
+
   display: flex;
   flex-wrap: wrap;
   margin: 0 0 $base-margin 0;
@@ -81,11 +88,5 @@
   .btn {
     float: left;
     margin: 0 $base-margin $base-margin 0;
-  }
-
-  &::after {
-    content: "";
-    display: table;
-    clear: both;
   }
 }

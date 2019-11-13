@@ -1,7 +1,9 @@
 .cards {
+  @supports not (display: flex) {
+    @include clearfix;
+  }
 
   .card {
-    max-width: non;
     margin: 0 0 ($base-margin * 2) 0;
 
     @include tablet {
@@ -23,12 +25,12 @@
     flex-wrap: wrap;
     margin-right: -($base-margin * 2);
   }
+}
 
-  @supports not (display: flex) {
-    &::after {
-      content: "";
-      display: table;
-      clear: both;
-    }
+// Layout organism for style guide
+
+.cards {
+  .card {
+    max-width: non;
   }
 }

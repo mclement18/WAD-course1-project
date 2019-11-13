@@ -1,3 +1,29 @@
+.link {
+  text-decoration: none;
+  color: $primary-color;
+  
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+  
+  &--head {
+    color: $black;
+    
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: $primary-color;
+    }
+  }
+  
+  &--foot {
+    color: $grey-2;
+  }
+}
+
+
+// Layout atoms in style guide
 .links {
   h3 {
     font-size: 1.3rem;
@@ -5,29 +31,5 @@
 
   li {
     margin: 0 0 $base-margin 0;
-  }
-}
-
-.link {
-  text-decoration: none;
-  color: $primary-color;
-
-  &:hover,
-  &:focus {
-    text-decoration: underline;
-  }
-
-  &--head {
-    color: $black;
-
-    &:hover,
-    &:focus {
-      text-decoration: none;
-      color: $primary-color;
-    }
-  }
-
-  &--foot {
-    color: $grey-2;
   }
 }

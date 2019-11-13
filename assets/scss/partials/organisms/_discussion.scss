@@ -1,8 +1,16 @@
 .discussion {
+  .input {
+    margin: 0;
+  }
+  
+  .comment {
+    margin: 0 0 ($base-margin * 2);
+  }
 
   &__header {
     display: flex;
     margin: 0 0 $base-margin 0;
+
     h2,
     .discussion__comment-nb {
       display: inline-block;
@@ -19,13 +27,5 @@
 
   &__comments {
     font-size: 1rem;
-  }
-
-  .input {
-    margin: 0;
-  }
-
-  .comment {
-    margin: 0 0 ($base-margin * 2);
   }
 }

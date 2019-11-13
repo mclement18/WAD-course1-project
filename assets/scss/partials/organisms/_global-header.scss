@@ -14,66 +14,68 @@
   .logo {
     margin: 0 $base-margin $base-margin 0;
     display: inline-block;
-  }
 
-  .search {
-    flex: 1 1 auto;
-    margin: 0 0 $base-margin 0;
-    max-width: none;
-
-    @include tablet {
-      margin: 0 $base-margin $base-margin 0;
-    }
-  }
-
-  .input__group {
-    margin: 0;
-  }
-
-  .input__field::placeholder {
-    color: $white;
-    @include desktop {
-      color: inherit;
-    }
-  }
-
-  nav {
-    margin: 0 0 $base-margin 0;
-  }
-
-  .global-nav--tablet {
-    display: none;
-  }
-
-  @include tablet {
-    .global-nav--mobile{
-      display: none;
-    }
-
-    .global-nav--tablet {
-      display: flex;
-      @supports not (display: flex) {
-        display: block;
-      }
+    @supports not (display: flex) {
+      float: left;
     }
   }
 }
 
-@supports not (display: flex) {
-  .global-header {
-    .logo {
-      float: left;
-    }
-
-    .search {
+.global-header {
+  .search {
+    flex: 1 1 auto;
+    margin: 0 0 $base-margin 0;
+    max-width: none;
+    
+    @supports not (display: flex) {
       display: inline-block;
       width: 50%;
       min-width: 340px;
     }
+    
+    .input__group {
+      margin: 0;
+    }
+    
+    .input__field::placeholder {
+      color: $white;
+      
+      @include desktop {
+        color: inherit;
+      }
+    }
+    
+    @include tablet {
+      margin: 0 $base-margin $base-margin 0;
+    }
+  }
+}
 
-    nav {
+.global-header {
+  nav {
+    margin: 0 0 $base-margin 0;
+    
+    @supports not (display: flex) {
       @include desktop {
         float: right;
+      }
+    }
+  }
+  
+  .global-nav--mobile {
+    @include tablet {
+      display: none;
+    }
+  }
+  
+  .global-nav--tablet {
+    display: none;
+    
+    @include tablet {
+      display: flex;
+      
+      @supports not (display: flex) {
+        display: block;
       }
     }
   }

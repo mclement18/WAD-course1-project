@@ -1,18 +1,20 @@
 .card {
+  font-size: 1rem;
+  color: inherit;
+
   margin: 0 0 $base-margin 0;
+  overflow: hidden;
+
   border: 1px solid $grey-3;
   border-radius: 3px;
-  color: inherit;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  font-size: 1rem;
-
   @supports (box-shadow: 0px 0px 20px $grey-4) {
     box-shadow: 0px 0px 20px $grey-4;
     border: none;
   }
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card__thumb {
@@ -52,20 +54,16 @@
   .btn {
     border: none;
     border-radius: 0;
+  }
 
-    &--like {
-      border-right: 1px solid $grey-3;
-      flex: 1 0 auto;
-      justify-content: flex-start;
-    }
+  .btn--like {
+    border-right: 1px solid $grey-3;
+    flex: 1 0 auto;
+    justify-content: flex-start;
   }
 
   @supports not (display: flex) {
-    &::after {
-      content: "";
-      display: table;
-      clear: both;
-    }
+    @include clearfix;
 
     .btn {
       float: right;
@@ -107,7 +105,8 @@
     }
   }
 }
-  
+
+// Layout for molecule in style guide
 .element__content {
   .card {
     max-width: 600px;

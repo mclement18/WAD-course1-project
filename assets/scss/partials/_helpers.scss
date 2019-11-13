@@ -1,13 +1,8 @@
 .content-wrapper {
+  @include clearfix;
   max-width: 110rem;
   margin: 0 auto;
   padding: 0 1em;
-
-  &::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
 }
 
 .bare-list {
