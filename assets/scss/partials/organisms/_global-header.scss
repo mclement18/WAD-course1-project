@@ -4,47 +4,46 @@
   padding: $base-margin 0 0 0;
 
   .content-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    @include display-flex;
+    @include flex-wrap(wrap);
+    @include align-items(center);
   }
 }
 
 .global-header {
   .logo {
-    margin: 0 $base-margin $base-margin 0;
-    display: inline-block;
-
-    @supports not (display: flex) {
+    @include if-supports-not-flexbox {
       float: left;
     }
+      
+    margin: 0 $base-margin $base-margin 0;
+    display: inline-block;
   }
 }
 
 .global-header {
   .search {
-    flex: 1 1 auto;
-    margin: 0 0 $base-margin 0;
-    max-width: none;
-    
-    @supports not (display: flex) {
+    @include flex(1, 1, auto);
+    @include if-supports-not-flexbox {
       display: inline-block;
       width: 50%;
       min-width: 340px;
     }
     
+    margin: 0 0 $base-margin 0;
+    max-width: none;
+    
     .input__group {
       margin: 0;
     }
     
-    .input__field::placeholder {
-      color: $white;
-      
+    .input__field {
+      @include placeholder-custom($color: $white);
       @include desktop {
-        color: inherit;
+        @include placeholder-custom($color: $grey-3);
       }
     }
-    
+
     @include tablet {
       margin: 0 $base-margin $base-margin 0;
     }
@@ -53,28 +52,31 @@
 
 .global-header {
   nav {
-    margin: 0 0 $base-margin 0;
-    
-    @supports not (display: flex) {
+    @include if-supports-not-flexbox {
       @include desktop {
         float: right;
       }
     }
+    
+    margin: 0 0 $base-margin 0;
   }
   
+  // .global-nav--mobile visible by default and hidden at tablet size
   .global-nav--mobile {
     @include tablet {
       display: none;
     }
   }
   
+  // .global-nave--tablet hidden by default and visible at tablet size
+  // If flexbox available, use display: flex, otherwise use display: block
   .global-nav--tablet {
     display: none;
     
     @include tablet {
-      display: flex;
+      @include display-flex;
       
-      @supports not (display: flex) {
+      @include if-supports-not-flexbox {
         display: block;
       }
     }

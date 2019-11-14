@@ -14,8 +14,4 @@ $grey-4: #e3e5e9;
 $grey-5: #f7f9fc;
 
 // image variable
-$goal-image-initial-ratio: 3 / 2;
 $goal-image-wanted-ratio: 4 / 3;
-$goal-image-ratio-correction: $goal-image-initial-ratio - $goal-image-wanted-ratio;
-$goal-image-width: (1 + $goal-image-ratio-correction) * 100%;
-$goal-image-left-margin: $goal-image-ratio-correction / 2 * 100%;

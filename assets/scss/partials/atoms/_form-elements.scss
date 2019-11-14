@@ -6,17 +6,17 @@
   margin: 0 0 $base-margin 0;
 
   @include tablet {
-    display: flex;
-    align-items: center;
+    @include display-flex;
+    @include align-items(center);
 
     &--textarea {
-      align-items: flex-start;
+      @include align-items(flex-start);
     }
   }
 }
 
 .input__row {
-  display: flex;
+  @include display-flex;
 
   @include tablet {
     float: right;
@@ -37,23 +37,27 @@
 }
 
 .input__field {
+  @include box-sizing(border-box);
+  @include flex(1, 0, auto);
+
+  @include if-supports-not-box-shadow {
+    border: 1px solid $grey-4;
+  }
+  @include if-supports-box-shadow {
+    @include box-shadow(0, 2px, 10px, 1px, $grey-4);
+    border: 1px solid $white;
+  }
+  
+  @include placeholder-custom($color: $grey-3);
+
   background: $white;
   color: $black;
   font-size: 1.5rem;
 
   padding: $base-margin;
   margin: 0;
-  border: 1px solid $grey-4;
-  border-radius: 2px;
-
-  @supports (box-shadow: 0 2px 10px 1px $grey-4) {
-    border: 1px solid $white;
-    box-shadow: 0 2px 10px 1px $grey-4;
-  }
-
-  box-sizing: border-box;
   width: 100%;
-  flex: 1 0 auto;
+  border-radius: 2px;
   
   font-family: "Rubik", Arial, Helvetica, sans-serif; // For textarea
   resize: none;                                       // 
@@ -61,23 +65,19 @@
   &:focus {
     border: 1px solid $primary-color;
   }
-
-  &::placeholder {
-    color: $grey-3;
-  }
 }
 
 .input__file-container {
+  @include flex(1, 0, auto);
   position: relative;
-  flex: 1 0 auto;
 } 
 
 .input__file-trigger {
-  width: 100%;
-
-  @supports not (display: flex) {
+  @include if-supports-not-flexbox {
     display: inline-block;
   }
+
+  width: 100%;
 }
 
 .input__file {
@@ -102,15 +102,16 @@
 /* Create a custom checkbox */
 .checkmark {
   // Box design
+  @include flex(0, 0, auto);
   display: inline-block;
   height: $base-margin;
   width: $base-margin;
   padding: 0;
   margin: 0 10px 0 0;
-  flex: 0 0 auto;
 
   // Checkmark design, hidden by default
   &::after {
+    @include transform(rotate(35deg));
     display: none;
     content: "";
     position: absolute;
@@ -120,17 +121,16 @@
     height: 7px;
     border: solid white;
     border-width: 0 2px 2px 0;
-    transform: rotate(35deg);
   }
 }
 
 .checkbox-container {
+  @include display-flex;
+  @include align-items(center);
+  @include user-select-none;
   position: relative;
-  display: flex;
-  align-items: center;
   margin: 0;
   cursor: pointer;
-  user-select: none;
 
   .input__checkbox {
     /* Hide the browser's default checkbox */

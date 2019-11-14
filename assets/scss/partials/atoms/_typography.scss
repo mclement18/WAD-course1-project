@@ -116,9 +116,9 @@ p, ul, ol, span, label {
 
   li {
     @include clearfix;
+    @include display-flex;
+    @include align-items(center);
 
-    display: flex;
-    align-items: center;
     border-bottom: 1px solid $grey-4;
     min-height: 9em;
 
@@ -133,24 +133,25 @@ p, ul, ol, span, label {
 }
 
 .col {
-  @supports (display: flex) {
-    flex: 0 1 15%;
+  @include if-supports-flexbox {
+    @include flex(0, 1, 15%);
+            
     margin: 0 5px 0 0;
 
     &:first-child {
-      flex: 1 0 35%;
+      @include flex(1, 0, 35%);
     }
   
     &__head:first-child {
-      flex: 1 0 30%;
+      @include flex(1, 0, 30%);
       
       @include tablet {
-        flex: 1 0 35%;
+        @include flex(1, 0, 35%);
       }
     }
   }
 
-  @supports not (display: flex) {
+  @include if-supports-not-flexbox {
     float: right;
     margin: 0 0 0 ($base-margin * 2);
     

@@ -8,7 +8,7 @@
   }
 
   &__header {
-    display: flex;
+    @include display-flex;
     margin: 0 0 $base-margin 0;
 
     h2,

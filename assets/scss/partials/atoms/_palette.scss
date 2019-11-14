@@ -1,9 +1,9 @@
 // Layout atom in style guide
 .palette {
   @include clearfix;
+  @include display-flex;
+  @include flex-wrap(wrap);
 
-  display: flex;
-  flex-wrap: wrap;
   margin-right: - $base-margin;
   font-size: 1rem;
 

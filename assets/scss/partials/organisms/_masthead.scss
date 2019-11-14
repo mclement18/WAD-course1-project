@@ -21,13 +21,7 @@
 }
 
 .masthead__title {
-  margin: 0 0 ($base-margin * 2) 0;
-
-  h1 {
-    margin: 0;
-  }
-  
-  @supports not (display: flex) {
+  @include if-supports-not-flexbox {
     @include clearfix;
     
     h1 {
@@ -43,12 +37,18 @@
     }
   }
 
-  @supports (display: flex) {
-    display: flex;
-    align-items: center;
+  @include if-supports-flexbox {
+    @include display-flex;
+    @include align-items(center);
 
     h1 {
       margin-right: auto;
     }
+  }
+
+  margin: 0 0 ($base-margin * 2) 0;
+
+  h1 {
+    margin: 0;
   }
 }

@@ -11,20 +11,20 @@
   }
 
   .input__row {
+    @include box-shadow(0, 2px, 10px, 1px, $grey-4);
     width: 100%;
-    box-shadow: 0 2px 10px 1px $grey-4;
   }
 
   .input__field {
-    border: 1px solid $grey-4;
-    border-radius: 2px 0 0 2px;
-    box-shadow: none;
-    width: auto;
-
-    @supports not (display: flex) {
+    @include box-shadow($none: true);
+    @include if-supports-not-flexbox {
       float: left;
       width: 75%;
     }
+
+    border: 1px solid $grey-4;
+    border-radius: 2px 0 0 2px;
+    width: auto;
 
     &:focus {
       border: 1px solid $primary-color;

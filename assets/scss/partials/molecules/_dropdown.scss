@@ -8,6 +8,14 @@
 }
 
 .dropdown {
+  @include if-supports-not-box-shadow {
+    border: 1px solid $grey-4;
+  }
+  @include if-supports-box-shadow {
+    @include box-shadow(0, 2px, 10px, 1px, $grey-4);
+    border: none;
+  }
+  
   display: none;
   position: absolute;
   top: 51px;
@@ -15,14 +23,9 @@
   white-space: nowrap;
 
   background: $white;
+  border-radius: 3px;
   overflow: hidden;
   
-  border-radius: 3px;
-  border: 1px solid $grey-4;
-  @supports (box-shadow: 0 2px 10px 1px $grey-4) {
-    box-shadow: 0 2px 10px 1px $grey-4;
-    border: none;
-  }
 
   &:hover,
   &:focus {

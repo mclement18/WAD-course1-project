@@ -3,8 +3,8 @@
   padding: ($base-margin * 4) 0;
   
   .content-wrapper {
-    display: flex;
-    align-items: center;
+    @include display-flex;
+    @include align-items(center);
   }
 
   a {

@@ -1,4 +1,11 @@
 .btn {
+  @include width-max-content;
+  @include box-sizing(border-box);
+
+  @include display-flex;
+  @include align-items(center);
+  @include justify-content(center);
+  
   font-size: 1.3rem;
   line-height: 1;
   background: $white;
@@ -6,8 +13,6 @@
 
   padding: $base-margin;
   margin: 0;
-  width: max-content;
-  box-sizing: border-box;
 
   border: 1px solid $grey-4;
   border-radius: 2px;
@@ -18,10 +23,6 @@
 
   cursor: pointer;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
   &:hover,
   &:active,
   &:focus {
@@ -80,9 +81,9 @@
 
 .buttons {
   @include clearfix;
-
-  display: flex;
-  flex-wrap: wrap;
+  @include display-flex;
+  @include flex-wrap(wrap);
+      
   margin: 0 0 $base-margin 0;
 
   .btn {

@@ -17,8 +17,8 @@
 }
 
 .input__group--nolabel {
-  display: flex;
-  align-items: center;
+  @include display-flex;
+  @include align-items(center);
 } 
 
 .additional-info {
@@ -26,7 +26,7 @@
     color: $grey-3;
 
     @include desktop {
-      flex: 0 0 auto;
+      @include flex(0, 0, auto);
     }
   }
 }
@@ -45,9 +45,9 @@
     content: "";
 
     @include tablet {
+      @include flex(0, 0, 25%); // allow overflow of the additional info on the right when possible
       width: 25%;
       margin: 0 0 ($base-margin * 2) 0; // fallback for float to keep the wrapped text indented
-      flex: 0 0 25%; // allow overflow of the additional info on the right when possible
     }
   }
 }
@@ -58,8 +58,8 @@
 }
 
 .prompt {
-  display: flex;
-  align-items: center;
+  @include display-flex;
+  @include align-items(center);
   margin: 0 0 $base-margin 0;
 
   .btn {
@@ -73,6 +73,15 @@
 
 .prompt--cancel {
   @include clearfix;
+  @include if-supports-not-flexbox {
+    a {
+      float: left;
+    }
+
+    .btn {
+      float: right;
+    }
+  }
 
   // Remove fake label
   &::before {
@@ -85,15 +94,5 @@
 
   .btn {
     width: 75%;
-  }
-
-  @supports not (display: flex) {
-    a {
-      float: left;
-    }
-
-    .btn {
-      float: right;
-    }
   }
 }

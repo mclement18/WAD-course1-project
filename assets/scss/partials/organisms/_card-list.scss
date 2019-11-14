@@ -1,5 +1,5 @@
 .cards {
-  @supports not (display: flex) {
+  @include if-supports-not-flexbox {
     @include clearfix;
   }
 
@@ -7,12 +7,12 @@
     margin: 0 0 ($base-margin * 2) 0;
 
     @include tablet {
-      margin: 0 ($base-margin * 2) ($base-margin * 2) 0;
-      width: calc(50% - (#{$base-margin} * 2));
-
-      @supports not (display: flex) {
+      @include if-supports-not-flexbox {
         float: left;
       }
+      
+      margin: 0 ($base-margin * 2) ($base-margin * 2) 0;
+      width: calc(50% - (#{$base-margin} * 2));
     }
 
     @include desktop {
@@ -21,8 +21,8 @@
   }
 
   @include tablet {
-    display: flex;
-    flex-wrap: wrap;
+    @include display-flex;
+    @include flex-wrap(wrap);
     margin-right: -($base-margin * 2);
   }
 }

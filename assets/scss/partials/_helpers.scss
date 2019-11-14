@@ -16,8 +16,8 @@
 }
 
 .bg {
+  @include width-max-content;
   background: $white;
-  width: max-content;
   padding: $base-margin;
   margin: 0 0 $base-margin 0;
 

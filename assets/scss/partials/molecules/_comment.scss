@@ -1,17 +1,15 @@
 .comment {
   @include clearfix;
+  @include display-flex;
 
-  display: flex;
   margin: 0 0 $base-margin 0;
   max-width: 800px;
 
   .avatar {
-    flex: 0 0 auto;
-    margin: 0.2rem $base-margin 0 0;
-
-    @supports not (display: flex) {
+    @include flex(0, 0, auto);
+    @include if-supports-not-flexbox {
       float: left;
-      margin-bottom: 13rem;
+      margin: 0.2rem 13rem 0 0;
 
       @include tablet {
         margin-bottom: 8rem;
@@ -20,6 +18,9 @@
       @include desktop {
         margin-bottom: 5rem;
       }
+    }
+    @include if-supports-flexbox {
+      margin: 0.2rem $base-margin 0 0;
     }
     
     &,
@@ -30,8 +31,8 @@
 }
 
 .comment__title {
-  display: flex;
-  align-items: center;
+  @include display-flex;
+  @include align-items(center);
   margin: 0 0 1em 0;
 
   a {
@@ -40,12 +41,12 @@
 }
 
 .comment__name {
-  font-size: 1.5rem;
-  margin:0 5px 0 0;
-
-  @supports not (display: flex) {
+  @include if-supports-not-flexbox {
     display: inline-block;
   }
+
+  font-size: 1.5rem;
+  margin:0 5px 0 0;
 }
 
 .comment__date {
@@ -55,18 +56,16 @@
 
 .comment--add {
   .avatar {
-    margin-top: $base-margin * 2;
-
-    @supports not (display: flex) {
+    @include if-supports-not-flexbox {
       margin-bottom: 10rem;
     }
+    
+    margin-top: $base-margin * 2;
   }
 
   .input {
-    max-width: none;
-    flex: 1 0 auto;
-
-    @supports not (display: flex) {
+    @include flex(1, 0, auto);
+    @include if-supports-not-flexbox {
       width: 82%;
 
       @include tablet {
@@ -77,6 +76,8 @@
         widows: 92%;
       }
     }
+
+    max-width: none;
   }
 
   .input__group {
