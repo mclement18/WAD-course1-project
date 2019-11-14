@@ -26,6 +26,7 @@
     
     h1 {
       display: inline-block;
+      margin: 0;
     }
 
     .btn {
@@ -42,13 +43,9 @@
     @include align-items(center);
 
     h1 {
-      margin-right: auto;
+      margin: 0 auto 0 0;
     }
   }
 
   margin: 0 0 ($base-margin * 2) 0;
-
-  h1 {
-    margin: 0;
-  }
 }

@@ -29,6 +29,7 @@
   display: inline-block;
   color: $black;
   margin: 0 0 .5em 0;
+  cursor: pointer;
 
   @include tablet {
     float: left;
