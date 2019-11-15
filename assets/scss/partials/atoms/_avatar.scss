@@ -7,3 +7,11 @@
     @include sizes(50px);
   }
 }
+
+// Layout for atom in style guide
+
+.element__content {
+  & > .avatar {
+    margin: 0 0 $base-margin 0;
+  }
+}

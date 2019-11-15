@@ -113,6 +113,7 @@ p, ul, ol, span, label {
 
 .style {
   font-size: 1rem;
+  margin: 0 0 $base-margin 0;
 
   li {
     @include clearfix;

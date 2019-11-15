@@ -14,4 +14,8 @@
 
 .element__content {
   @include clearfix;
+
+  &--form-elements {
+    max-width: 600px;
+  }
 }
