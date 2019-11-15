@@ -1,3 +1,5 @@
+// Special masthead
+// Put space between masthead bottom border and content
 .goal {
   .content-wrapper {
     margin: 0 0 ($base-margin * 3) 0;
@@ -7,6 +9,7 @@
 .goal__title {
   display: block;
 
+  // Put goal title on the right on desktop size
   @include desktop {
     float: right;
     width: 50%;
@@ -42,6 +45,7 @@
     display: block;
   }
 
+  // Put image on the left in desktop size
   @include desktop {
     float: left;
     margin: 0 ($base-margin * 2) 0 0;
@@ -50,6 +54,7 @@
 }
 
 .goal__info {
+  // Put goal info on the right on desktop size
   @include desktop {
     float: right;
     width: 50%;
@@ -57,52 +62,71 @@
 }
 
 .goal__buttons {
+  // Wrap buttons
   @include display-flex;
   @include flex-wrap(wrap);
   margin: 0 0 $base-margin 0;
 
   @include tablet {
+    // Stop wrapping at tablet size
     @include flex-wrap(nowrap);
-  }
-
-  .btn {
-    @include if-supports-flexbox {
-      @include flex(1, 0, auto);
-      width: calc(50% - #{$base-margin});
-      
-      @include tablet {
-        @include flex(0, 1, ((1 / 3) * 100%));
-      }
-    }
-    
-    @include if-supports-not-flexbox {
-      float: left;
-      width: calc(50% - (#{$base-margin} / 2));
-      
-      @include tablet {
-        width: calc(((1 / 3) * 100%) - (#{$base-margin} * 2 / 3));
-      }
-    }
-    
-    margin: 0 $base-margin $base-margin 0;
-
-    &:last-child {
-      margin: 0 0 $base-margin 0;
-    }
   }
 }
 
-.goal__buttons--three {
-  .btn:first-child {
+// General style for goal buttons
+// Two buttons next to each other taking spanning all the parent element
+// And taking a third of the space at desktop size
+.goal__buttons .btn {
+  @include if-supports-flexbox {
+    @include flex(1, 0, auto);
+    width: calc(50% - #{$base-margin});
+    
+    @include desktop {
+      @include flex(1, 1, auto);
+      width: calc(((1 / 3) * 100%) - #{$base-margin});
+    }
+  }
+  
+  @include if-supports-not-flexbox {
+    float: left;
+    width: calc(50% - (#{$base-margin} / 2));
+    
+    @include desktop {
+      width: calc(((1 / 3) * 100%) - (#{$base-margin} * 2 / 3));
+    }
+  }
+  
+  margin: 0 $base-margin $base-margin 0;
+
+  &:last-child {
+    margin: 0 0 $base-margin 0;
+  }
+}
+
+// Goal buttons style when there are three buttons
+// First button span all the parent width, others aligne in a second line 50% width
+// At tablet size all three buttons are in line, taking 30% of the width
+.goal__buttons--three .btn {
+  @include tablet {
+    @include if-supports-not-flexbox {
+      width: calc(((1 / 3) * 100%) - (#{$base-margin} * 2 / 3));
+    }
+    @include if-supports-flexbox {
+      width: calc(((1 / 3) * 100%) - #{$base-margin});
+    }
+  }
+
+  &:first-child {
     margin: 0 0 $base-margin 0;
     width: 100%;
 
+    // need to overwright pseudo-class specificity
     @include tablet {
       @include if-supports-not-flexbox {
         width: calc(((1 / 3) * 100%) - (#{$base-margin} * 2 / 3));
       }
       @include if-supports-flexbox {
-        width: auto;
+        width: calc(((1 / 3) * 100%) - #{$base-margin});
       }
       
       margin: 0 $base-margin $base-margin 0;
@@ -149,6 +173,8 @@
   }
 }
 
+// Add float to list element and clearfix to lists in case flexbox is not supported
+// for .goal__author, the avatar is flaoting left from the .masthead__title
 .goal__author,
 .goal__buttons,
 .goal__stats,

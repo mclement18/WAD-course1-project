@@ -1,3 +1,4 @@
+// Global navigation layout
 .global-nav {
   @include clearfix;
   @include display-flex;
@@ -20,6 +21,7 @@
   }
 }
 
+// Navigation avatar that has dropdown menu
 .has-dropdown {
   font-size: 1rem;
 
@@ -28,6 +30,7 @@
   }
 }
 
+// Navigaation in masthead
 .global-nav--masthead {
   > li {
     padding: 0 0 ($base-margin * 2) 0;

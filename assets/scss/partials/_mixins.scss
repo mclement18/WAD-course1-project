@@ -92,6 +92,7 @@
               flex: $grow $shrink $basis;
 }
 
+// Checking flexbox support
 @mixin if-supports-flexbox {
   @supports (display: flex) or (display: -webkit-box) or (display: -ms-flexbox) {
     @content;
@@ -121,6 +122,7 @@
   }
 }
 
+// Checking box-shadow support
 @mixin if-supports-box-shadow {
   @supports (box-shadow: 0 0 0 0 black) or (-webkit-box-shadow: 0 0 0 0 black) {
     @content;

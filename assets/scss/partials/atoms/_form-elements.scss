@@ -1,3 +1,4 @@
+// Base layout of input with label
 .input__group,
 .warning,
 .additional-info {
@@ -15,6 +16,7 @@
   }
 }
 
+// Base layout of input without label
 .input__row {
   @include display-flex;
 
@@ -24,6 +26,7 @@
   }
 }
 
+// Label style
 .input__label,
 %input__label {
   display: inline-block;
@@ -37,6 +40,7 @@
   }
 }
 
+// Field style
 .input__field {
   @include box-sizing(border-box);
   @include flex(1, 0, auto);
@@ -68,12 +72,13 @@
   }
 }
 
+// Customized file input
 .input__file-container {
   @include flex(1, 0, auto);
   position: relative;
 } 
 
-.input__file-trigger {
+.input__file-trigger {                  // New button, additional JS script to display selected file inside button
   @include if-supports-not-flexbox {
     display: inline-block;
   }
@@ -82,14 +87,6 @@
 }
 
 .input__file {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  width: 0.1px;
-	height: 0.1px;
-	overflow: hidden;
-	z-index: -1;
   cursor: pointer;
 
   &:hover + .input__file-trigger,
@@ -100,7 +97,7 @@
   }
 }
 
-/* Create a custom checkbox */
+// Create a custom checkbox 
 .checkmark {
   // Box design
   @include flex(0, 0, auto);
@@ -134,12 +131,7 @@
   cursor: pointer;
 
   .input__checkbox {
-    /* Hide the browser's default checkbox */
-    position: absolute;
-    opacity: 0;
     cursor: pointer;
-    height: 0;
-    width: 0;
 
     // Highlight the box when hovered or focused
     &:hover + .checkmark,
@@ -159,6 +151,7 @@
   }
 }
 
+// Warning message
 .warning {
   color: $secondary-color;
 

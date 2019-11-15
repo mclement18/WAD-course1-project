@@ -16,11 +16,13 @@
   }
 }
 
+// Layout for input group without label
 .input__group--nolabel {
   @include display-flex;
   @include align-items(center);
 } 
 
+// Field additional info
 .additional-info {
   p {
     color: $grey-3;
@@ -52,11 +54,13 @@
   }
 }
 
+// If a link is on the same line as  a check box, push it to the right
 .checkbox-container + a {
   float: right;
   margin-left: auto;
 }
 
+// Prompt layout
 .prompt {
   @include display-flex;
   @include align-items(center);
@@ -71,17 +75,9 @@
   }
 }
 
+// Prompt with cancel link
 .prompt--cancel {
   @include clearfix;
-  @include if-supports-not-flexbox {
-    a {
-      float: left;
-    }
-
-    .btn {
-      float: right;
-    }
-  }
 
   // Remove fake label
   &::before {
@@ -89,10 +85,18 @@
   }
 
   a {
+    @include if-supports-not-flexbox {
+      float: left;
+    }
+
     margin: 0 auto 0 0;
   }
 
   .btn {
+    @include if-supports-not-flexbox {
+      float: right;
+    }
+
     width: 75%;
   }
 }

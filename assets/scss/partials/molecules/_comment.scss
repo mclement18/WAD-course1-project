@@ -1,3 +1,4 @@
+// Comment style
 .comment {
   @include clearfix;
   @include display-flex;
@@ -6,7 +7,6 @@
   max-width: 800px;
 
   .avatar {
-    @include flex(0, 0, auto);
     @include if-supports-not-flexbox {
       float: left;
       margin: 0.2rem 13rem 0 0;
@@ -19,7 +19,9 @@
         margin-bottom: 5rem;
       }
     }
+
     @include if-supports-flexbox {
+      @include flex(0, 0, auto);
       margin: 0.2rem $base-margin 0 0;
     }
     
@@ -54,6 +56,7 @@
   margin: 0;
 }
 
+// Post a comment style update
 .comment--add {
   .avatar {
     @include if-supports-not-flexbox {

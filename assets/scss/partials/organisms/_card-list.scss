@@ -1,8 +1,18 @@
+// Card list layout
 .cards {
   @include if-supports-not-flexbox {
     @include clearfix;
   }
 
+  @include tablet {
+    @include display-flex;
+    @include flex-wrap(wrap);
+    margin-right: -($base-margin * 2);
+  }
+}
+
+// Card layout in card list
+.cards {
   .card {
     margin: 0 0 ($base-margin * 2) 0;
 
@@ -12,18 +22,12 @@
       }
       
       margin: 0 ($base-margin * 2) ($base-margin * 2) 0;
-      width: calc(50% - (#{$base-margin} * 2));
+      width: calc(50% - (#{$base-margin} * 2));           // Two cards by row
     }
 
     @include desktop {
-      width: calc((100% / 3) - (#{$base-margin} * 2));
+      width: calc((100% / 3) - (#{$base-margin} * 2));    // Three cards by row
     }
-  }
-
-  @include tablet {
-    @include display-flex;
-    @include flex-wrap(wrap);
-    margin-right: -($base-margin * 2);
   }
 }
 

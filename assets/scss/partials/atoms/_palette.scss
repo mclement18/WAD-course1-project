@@ -4,8 +4,8 @@
   @include display-flex;
   @include flex-wrap(wrap);
 
-  margin-right: - $base-margin;
   font-size: 1rem;
+  margin-right: - $base-margin;
 
   li {
     float: left;

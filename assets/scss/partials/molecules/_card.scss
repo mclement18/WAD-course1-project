@@ -1,3 +1,4 @@
+// Main card style
 .card {
   @include display-flex;
   @include flex-column;
@@ -19,6 +20,7 @@
   overflow: hidden;
 }
 
+// Card thumb style
 .card__thumb {
   @include goal-image-ratio-correction((3 / 2));
   
@@ -49,11 +51,19 @@
   color: $grey-4;
 }
 
+// Card footer style
 .card__footer {
+  @include clearfix;
   @include display-flex;
   border-top: 1px solid $grey-3;
 
+  // Footer with buttons
   .btn {
+    @include if-supports-not-flexbox {
+      float: right;
+      width: 30%;
+    }
+
     border: none;
     border-radius: 0;
   }
@@ -61,37 +71,16 @@
   .btn--like {
     @include flex(1, 0, auto);
     @include justify-content(flex-start);
-    border-right: 1px solid $grey-3;
-  }
-
-  @include if-supports-not-flexbox {
-    @include clearfix;
-
-    .btn {
-      float: right;
-      width: 30%;
-    }
-
-    .btn--like {
+    @include if-supports-not-flexbox {
       float: left;
       width: 70%;
       text-align: left;
     }
-  }
-}  
 
-.card {
-  position: relative;
-  .tag {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: $base-margin;
-    z-index: 1;
+    border-right: 1px solid $grey-3;
   }
-}
 
-.card {
+  // Footer with date of completion
   .date {
     @include display-flex;
     @include align-items(center);
@@ -105,6 +94,18 @@
     .icon {
       margin: 0 5px 0 0;
     }
+  }
+}  
+
+// Card tag style
+.card {
+  position: relative;
+  .tag {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: $base-margin;
+    z-index: 1;
   }
 }
 

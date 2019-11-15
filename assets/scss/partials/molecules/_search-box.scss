@@ -1,8 +1,7 @@
+// Search box layout
 .search {
   .input__group {
-    @include tablet {
-      display: block;
-    }
+    display: block;
   }
 
   .input__label {
@@ -16,7 +15,7 @@
   }
 
   .input__field {
-    @include box-shadow($none: true);
+    @include box-shadow($none: true);     // Remove shadow
     @include if-supports-not-flexbox {
       float: left;
       width: 75%;
@@ -37,6 +36,7 @@
   }
 }
 
+// Search box with primary color
 .search--primary {
   .input__field {
     border: 1px solid $primary-color;
