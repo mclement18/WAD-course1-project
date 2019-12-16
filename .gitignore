@@ -53,5 +53,3 @@ node_modules/
 # Ignores the .sass-cache folder and contents
 .sass-cache/
 
-# ignore designs folder
-website-designs/
